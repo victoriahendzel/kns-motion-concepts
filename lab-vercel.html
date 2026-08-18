@@ -1,0 +1,2532 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KNS · Motion Lab</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#122138; --navy2:#0d1a2e; --cream:#F2F0EA; --cream2:#EAE7DE;
+  --coral:#D77C63; --coral2:#E3776B; --ink:#1b2c47; --line:#c9c4b8;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--cream);color:var(--ink);
+  font-family:"Archivo",-apple-system,"Helvetica Neue",Arial,sans-serif}
+header{padding:64px 4vw 8px;display:flex;justify-content:space-between;align-items:baseline}
+header .mark{font-weight:800;letter-spacing:.42em;font-size:18px}
+header .tag{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--coral);font-weight:600}
+.intro{padding:26px 4vw 10px;max-width:1100px}
+.intro h1{font-weight:800;font-size:clamp(38px,5vw,72px);line-height:1.02;letter-spacing:-.02em}
+.intro h1 em{font-style:normal;color:var(--coral)}
+.intro p{margin-top:18px;color:#43506a;font-weight:500;max-width:60ch;line-height:1.6}
+.filters{position:sticky;top:0;z-index:40;display:flex;gap:8px;flex-wrap:wrap;
+  padding:16px 4vw;background:color-mix(in srgb, var(--cream) 88%, transparent);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.chip{border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer;
+  font:600 12px/1 "Archivo",sans-serif;letter-spacing:.12em;text-transform:uppercase;
+  padding:9px 14px;border-radius:999px;transition:.2s}
+.chip:hover{border-color:var(--coral)}
+.chip.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));
+  gap:26px;padding:28px 4vw 80px}
+.card{background:#fff;border:1px solid var(--line);display:flex;flex-direction:column;
+  box-shadow:0 20px 50px -38px rgba(18,33,56,.5);break-inside:avoid}
+.card.hide{display:none}
+.card .tile{flex:1;min-height:0}
+.card figcaption{display:flex;align-items:baseline;gap:10px;padding:12px 14px;
+  border-top:1px solid var(--cream2);font-size:13px}
+.card figcaption .num{color:var(--coral);font-weight:700;font-size:11px;letter-spacing:.1em}
+.card figcaption b{font-weight:700}
+.card figcaption i{font-style:normal;color:#8a8f9c;font-size:11px;letter-spacing:.14em;
+  text-transform:uppercase;margin-left:auto}
+footer{padding:30px 4vw 60px;text-align:center;font-size:12px;letter-spacing:.08em;color:#8a8f9c}
+</style>
+</head>
+<body>
+<header><div class="mark">KNS</div><div class="tag">Motion Lab · 28 studies · 08.2026</div></header>
+<div class="intro">
+  <h1>Motion studies.<br><em>Wide first, then narrow.</em></h1>
+  <p>An exploration board of animation directions for the KNS visual language —
+  sketch reveals, generative drawing, blueprint mechanics, kinetic type.
+  Everything here is code, not video: resize it, hover it, remix it.
+  Favorites survive; the rest get archived.</p>
+</div>
+<nav class="filters"><button class="chip on" data-f="all">all</button><button class="chip" data-f="css">css</button><button class="chip" data-f="generative">generative</button><button class="chip" data-f="interactive">interactive</button><button class="chip" data-f="photo">photo</button><button class="chip" data-f="scroll">scroll</button><button class="chip" data-f="sketch">sketch</button><button class="chip" data-f="svg">svg</button><button class="chip" data-f="type">type</button></nav>
+<main class="grid">
+<figure class="card" data-tags="sketch svg">
+<div class="tile" data-title="Crosshatch Etch Reveal" data-tags="sketch svg">
+<style>
+.t-sketch-reveal-crosshatch{aspect-ratio:4/3;width:100%;overflow:hidden;position:relative;background:var(--cream);cursor:pointer}
+.t-sketch-reveal-crosshatch svg{display:block;width:100%;height:100%}
+.t-sketch-reveal-crosshatch .cap{position:absolute;left:14px;bottom:10px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:800;color:var(--navy);opacity:.55}
+</style>
+<div class="t-sketch-reveal-crosshatch" id="sketch-reveal-crosshatch-root">
+<svg viewBox="0 0 440 330" aria-label="Etched brownstone facade revealed by crosshatch">
+  <defs><mask id="sketch-reveal-crosshatch-m" maskUnits="userSpaceOnUse">
+    <rect x="0" y="0" width="440" height="330" fill="black"/>
+    <g id="sketch-reveal-crosshatch-f1" fill="none" stroke="white" transform="rotate(45 220 165)"></g>
+    <g id="sketch-reveal-crosshatch-f2" fill="none" stroke="white" transform="rotate(-45 220 165)"></g>
+  </mask></defs>
+  <g mask="url(#sketch-reveal-crosshatch-m)">
+    <g fill="none" stroke="var(--navy)" stroke-width="1.6" stroke-linecap="round">
+      <path d="M92 302 H352" stroke-width="2"/>
+      <rect x="132" y="76" width="176" height="226"/>
+      <path d="M124 60 H316 M124 76 H316 M124 60 V76 M316 60 V76 M128 68 H312"/>
+      <g stroke-width="1.1">
+        <path d="M136 62 V74 M148 62 V74 M160 62 V74 M172 62 V74 M184 62 V74 M196 62 V74 M208 62 V74 M220 62 V74 M232 62 V74 M244 62 V74 M256 62 V74 M268 62 V74 M280 62 V74 M292 62 V74 M304 62 V74"/>
+      </g>
+      <g id="sketch-reveal-crosshatch-win"></g>
+      <rect x="256" y="232" width="38" height="70"/>
+      <path d="M262 238 h26 v58 h-26 z M262 266 h26 M275 238 v58" stroke-width="1"/>
+      <path d="M252 226 H298 M252 222 H298" />
+      <path d="M300 302 l14 -6 h20 M314 296 v6 M320 288 l14 -6 v20 M334 282 h16" stroke-width="1.3"/>
+      <path d="M300 280 v14 M308 276 v14 M330 268 v14" stroke-width="1"/>
+      <g stroke-width=".7" opacity=".7" id="sketch-reveal-crosshatch-hatch"></g>
+    </g>
+    <path id="sketch-reveal-crosshatch-coral" d="M124 68 H316" fill="none" stroke="var(--coral)" stroke-width="3" stroke-linecap="round"/>
+  </g>
+</svg>
+<div class="cap">Plate 01 — Crosshatch</div>
+</div>
+<script>(function(){
+var root=document.getElementById('sketch-reveal-crosshatch-root');
+var f1=document.getElementById('sketch-reveal-crosshatch-f1');
+var f2=document.getElementById('sketch-reveal-crosshatch-f2');
+var win=document.getElementById('sketch-reveal-crosshatch-win');
+var hatch=document.getElementById('sketch-reveal-crosshatch-hatch');
+var coral=document.getElementById('sketch-reveal-crosshatch-coral');
+var NS='http://www.w3.org/2000/svg';
+// windows: 3 cols x 3 rows (door replaces bottom-right)
+var cols=[148,204,258],rows=[96,158,220];
+for(var r=0;r<3;r++)for(var c=0;c<3;c++){
+  if(r===2&&c===2)continue;
+  var x=cols[c],y=rows[r],g=document.createElementNS(NS,'g');
+  g.innerHTML='<rect x="'+x+'" y="'+y+'" width="34" height="46"/><path d="M'+x+' '+(y+23)+' h34 M'+(x+17)+' '+y+' v46" stroke-width="1"/><path d="M'+(x-4)+' '+(y-5)+' h42 M'+(x-4)+' '+(y-9)+' h42" stroke-width="1.2"/><path d="M'+(x-3)+' '+(y+49)+' h40" stroke-width="1.4"/>';
+  win.appendChild(g);
+}
+// faint facade hatch texture
+var seed=7;function rnd(){seed=(seed*16807)%2147483647;return seed/2147483647;}
+for(var i=0;i<26;i++){var hx=136+rnd()*150,hy=82+rnd()*210,hl=8+rnd()*14;
+  var ln=document.createElementNS(NS,'line');ln.setAttribute('x1',hx);ln.setAttribute('y1',hy);ln.setAttribute('x2',hx+hl*.7);ln.setAttribute('y2',hy+hl*.7);hatch.appendChild(ln);}
+// build mask scribble families: horizontal lines inside rotated groups
+var strokes=[];
+function family(g,delay0){
+  var list=[],idx=0;
+  for(var y=-140;y<=470;y+=20){
+    var j1=(rnd()-.5)*16,j2=(rnd()-.5)*16,jy=(rnd()-.5)*4;
+    var ln=document.createElementNS(NS,'line');
+    var rev=idx%2===1;
+    ln.setAttribute('x1',rev?600+j2:-160+j1);ln.setAttribute('x2',rev?-160+j1:600+j2);
+    ln.setAttribute('y1',y+jy);ln.setAttribute('y2',y-jy);
+    ln.setAttribute('stroke-width',(14+rnd()*8).toFixed(1));
+    ln.setAttribute('stroke-linecap','round');
+    g.appendChild(ln);
+    var L=ln.getTotalLength();
+    ln.style.strokeDasharray=L+' '+L;
+    list.push({el:ln,L:L,delay:delay0+idx*60});
+    idx++;
+  }
+  return list;
+}
+strokes=family(f1,0).concat(family(f2,400));
+var coralL=coral.getTotalLength();coral.style.strokeDasharray=coralL+' '+coralL;
+var lastDelay=0;strokes.forEach(function(s){lastDelay=Math.max(lastDelay,s.delay);});
+strokes.push({el:coral,L:coralL,delay:lastDelay+650});
+var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function setHidden(){strokes.forEach(function(s){s.el.style.transition='none';s.el.style.strokeDashoffset=s.L;});}
+function reveal(){strokes.forEach(function(s){s.el.style.transition='none';s.el.style.strokeDashoffset=0;});}
+var busy=false;
+function play(){
+  if(reduced||busy)return;busy=true;
+  setHidden();root.getBoundingClientRect();
+  strokes.forEach(function(s){s.el.style.transition='stroke-dashoffset .55s cubic-bezier(.4,0,.3,1) '+s.delay+'ms';s.el.style.strokeDashoffset=0;});
+  setTimeout(function(){busy=false;},lastDelay+1400);
+}
+if(reduced){reveal();}else{
+  setHidden();
+  var played=false;
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&!played){played=true;play();io.disconnect();}});},{threshold:.35});
+  io.observe(root);
+  root.addEventListener('click',play);
+}
+})()</script>
+</div>
+<figcaption><span class="num">01</span><b>Crosshatch Etch Reveal</b><i>sketch svg</i></figcaption>
+</figure>
+<figure class="card" data-tags="sketch svg">
+<div class="tile" data-title="Radial Burst Etch Reveal" data-tags="sketch svg">
+<style>
+.t-sketch-reveal-radial{aspect-ratio:4/3;width:100%;overflow:hidden;position:relative;background:var(--cream);cursor:pointer}
+.t-sketch-reveal-radial svg{display:block;width:100%;height:100%}
+.t-sketch-reveal-radial .cap{position:absolute;right:14px;bottom:10px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:800;color:var(--navy);opacity:.55}
+</style>
+<div class="t-sketch-reveal-radial" id="sketch-reveal-radial-root">
+<svg viewBox="0 0 440 330" aria-label="Etched water tower revealed by radial burst">
+  <defs><mask id="sketch-reveal-radial-m" maskUnits="userSpaceOnUse">
+    <rect width="440" height="330" fill="black"/>
+    <g id="sketch-reveal-radial-rays" stroke="white" fill="none" stroke-linecap="round"></g>
+  </mask></defs>
+  <circle id="sketch-reveal-radial-ring" cx="220" cy="158" r="132" fill="none" stroke="var(--coral)" stroke-width="1.4"/>
+  <circle cx="220" cy="158" r="139" fill="none" stroke="var(--coral)" stroke-width="4" stroke-dasharray="1.5 21.3" opacity=".8" id="sketch-reveal-radial-ticks"/>
+  <g mask="url(#sketch-reveal-radial-m)">
+    <g fill="none" stroke="var(--navy)" stroke-width="1.6" stroke-linecap="round">
+      <path d="M120 276 H320" stroke-width="2"/>
+      <path d="M186 204 L178 276 M254 204 L262 276 M204 204 L200 276 M236 204 L240 276" />
+      <path d="M181 240 L259 240 M184 222 L256 222 M180 258 L260 258" stroke-width="1.1"/>
+      <path d="M182 222 L258 258 M258 222 L182 258" stroke-width="1"/>
+      <path d="M176 204 H264"/>
+      <path d="M176 118 V204 M264 118 V204"/>
+      <path d="M176 204 Q220 212 264 204"/>
+      <path d="M172 118 H268"/>
+      <path d="M172 118 L220 70 L268 118" stroke-width="1.8"/>
+      <path d="M220 70 V54 M214 58 H226" stroke-width="1.3"/>
+      <path d="M188 106 L252 106 M181 112 L259 112" stroke-width="1"/>
+      <g stroke-width=".9" id="sketch-reveal-radial-staves"></g>
+      <path d="M176 138 H264 M176 162 H264 M176 186 H264" stroke-width="1.2"/>
+      <path d="M96 276 v-8 M344 276 v-8" stroke-width="1.2"/>
+    </g>
+  </g>
+</svg>
+<div class="cap">Plate 02 — Survey</div>
+</div>
+<script>(function(){
+var root=document.getElementById('sketch-reveal-radial-root');
+var rays=document.getElementById('sketch-reveal-radial-rays');
+var ring=document.getElementById('sketch-reveal-radial-ring');
+var staves=document.getElementById('sketch-reveal-radial-staves');
+var NS='http://www.w3.org/2000/svg';
+for(var sx=184;sx<=256;sx+=9){var l=document.createElementNS(NS,'line');l.setAttribute('x1',sx);l.setAttribute('y1',120);l.setAttribute('x2',sx);l.setAttribute('y2',202);staves.appendChild(l);}
+var CX=220,CY=152,N=24,strokes=[];
+var passes=[{r0:2,r1:56,w:7},{r0:50,r1:106,w:18},{r0:100,r1:172,w:30}];
+// order rays from top angle outward, symmetric left/right
+var order=[];for(var k=0;k<N;k++)order.push(k);
+order.sort(function(a,b){
+  function d(i){var ang=(i/N)*360-90;var dd=Math.abs(((ang+90)%360+360)%360);return Math.min(dd,360-dd);}
+  return d(a)-d(b);
+});
+passes.forEach(function(p,pi){
+  order.forEach(function(i,rank){
+    var ang=(i/N)*Math.PI*2-Math.PI/2;
+    var x1=CX+Math.cos(ang)*p.r0,y1=CY+Math.sin(ang)*p.r0;
+    var x2=CX+Math.cos(ang)*p.r1,y2=CY+Math.sin(ang)*p.r1;
+    var ln=document.createElementNS(NS,'line');
+    ln.setAttribute('x1',x1);ln.setAttribute('y1',y1);ln.setAttribute('x2',x2);ln.setAttribute('y2',y2);
+    ln.setAttribute('stroke-width',p.w);
+    rays.appendChild(ln);
+    var L=Math.max(ln.getTotalLength(),1);
+    ln.style.strokeDasharray=L+' '+L;
+    strokes.push({el:ln,L:L,delay:750+pi*300+rank*40});
+  });
+});
+var ringL=ring.getTotalLength();ring.style.strokeDasharray=ringL+' '+ringL;
+var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function instant(v){strokes.forEach(function(s){s.el.style.transition='none';s.el.style.strokeDashoffset=v?0:s.L;});
+  ring.style.transition='none';ring.style.strokeDashoffset=v?0:ringL;}
+var busy=false,total=750+2*300+(N-1)*40+700;
+function forward(){
+  instant(false);root.getBoundingClientRect();
+  ring.style.transition='stroke-dashoffset .7s ease-out';ring.style.strokeDashoffset=0;
+  strokes.forEach(function(s){s.el.style.transition='stroke-dashoffset .45s cubic-bezier(.35,0,.25,1) '+s.delay+'ms';s.el.style.strokeDashoffset=0;});
+}
+function play(){if(reduced||busy)return;busy=true;forward();setTimeout(function(){busy=false;},total);}
+function replayRev(){
+  if(reduced||busy)return;busy=true;
+  strokes.forEach(function(s,i){s.el.style.transition='stroke-dashoffset .3s ease-in '+(i*8)+'ms';s.el.style.strokeDashoffset=s.L;});
+  setTimeout(function(){forward();setTimeout(function(){busy=false;},total);},strokes.length*8+400);
+}
+if(reduced){instant(true);}else{
+  instant(false);
+  var played=false;
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&!played){played=true;play();io.disconnect();}});},{threshold:.35});
+  io.observe(root);
+  root.addEventListener('mouseenter',replayRev);
+  root.addEventListener('click',replayRev);
+}
+})()</script>
+</div>
+<figcaption><span class="num">02</span><b>Radial Burst Etch Reveal</b><i>sketch svg</i></figcaption>
+</figure>
+<figure class="card" data-tags="sketch svg">
+<div class="tile" data-title="Spiral Engraver Reveal" data-tags="sketch svg">
+<style>
+.t-sketch-reveal-spiral{aspect-ratio:4/3;width:100%;overflow:hidden;position:relative;background:var(--cream)}
+.t-sketch-reveal-spiral svg{display:block;width:100%;height:100%}
+.t-sketch-reveal-spiral .stamp{position:absolute;right:12px;bottom:12px;border:1.5px dashed var(--navy);color:var(--navy);background:transparent;font:inherit;font-size:9px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;padding:7px 12px;border-radius:3px;cursor:pointer;transform:rotate(-3deg);transition:background .2s,color .2s;animation:t-srs-pulse 2.6s ease-in-out infinite}
+.t-sketch-reveal-spiral .stamp:hover{background:var(--navy);color:var(--cream)}
+@keyframes t-srs-pulse{0%,100%{opacity:.75}50%{opacity:1}}
+@media (prefers-reduced-motion: reduce){.t-sketch-reveal-spiral .stamp{animation:none}}
+</style>
+<div class="t-sketch-reveal-spiral" id="sketch-reveal-spiral-root">
+<svg viewBox="0 0 440 330" aria-label="Etched cornice medallion revealed by spiral engraving">
+  <defs><mask id="sketch-reveal-spiral-m" maskUnits="userSpaceOnUse">
+    <rect width="440" height="330" fill="black"/>
+    <path id="sketch-reveal-spiral-sp" fill="none" stroke="white" stroke-width="21" stroke-linecap="round"/>
+  </mask></defs>
+  <g mask="url(#sketch-reveal-spiral-m)">
+    <g fill="none" stroke="var(--navy)" stroke-width="1.5" stroke-linecap="round">
+      <circle cx="220" cy="165" r="144"/>
+      <circle cx="220" cy="165" r="137" stroke-width="1"/>
+      <circle cx="220" cy="165" r="104" stroke-width="1.2"/>
+      <circle cx="220" cy="165" r="30"/>
+      <circle cx="220" cy="165" r="7" fill="var(--navy)" stroke="none"/>
+      <g id="sketch-reveal-spiral-petals" stroke-width="1.3"/>
+      <g id="sketch-reveal-spiral-dentil" stroke-width="1"/>
+      <path d="M220 21 V33 M220 297 V309 M76 165 H88 M352 165 H364" stroke-width="2"/>
+      <path d="M120 65 L134 79 M320 65 L306 79 M120 265 L134 251 M320 265 L306 251" stroke-width="1.2"/>
+    </g>
+    <circle cx="220" cy="165" r="118" fill="none" stroke="var(--coral)" stroke-width="2" opacity=".9"/>
+  </g>
+  <circle id="sketch-reveal-spiral-dot" cx="220" cy="165" r="4.5" fill="var(--coral)" opacity="0"/>
+</svg>
+<button class="stamp" id="sketch-reveal-spiral-btn" type="button">Re-Engrave</button>
+</div>
+<script>(function(){
+var sp=document.getElementById('sketch-reveal-spiral-sp');
+var dot=document.getElementById('sketch-reveal-spiral-dot');
+var btn=document.getElementById('sketch-reveal-spiral-btn');
+var root=document.getElementById('sketch-reveal-spiral-root');
+var petals=document.getElementById('sketch-reveal-spiral-petals');
+var dentil=document.getElementById('sketch-reveal-spiral-dentil');
+var NS='http://www.w3.org/2000/svg',CX=220,CY=165;
+// rosette: 12 petals + dentil course around inner ring
+for(var i=0;i<12;i++){
+  var a=i/12*Math.PI*2;
+  var p=document.createElementNS(NS,'path');
+  p.setAttribute('d','M'+(CX+Math.cos(a)*32)+' '+(CY+Math.sin(a)*32)+
+    ' Q'+(CX+Math.cos(a+.22)*72)+' '+(CY+Math.sin(a+.22)*72)+' '+(CX+Math.cos(a)*100)+' '+(CY+Math.sin(a)*100)+
+    ' Q'+(CX+Math.cos(a-.22)*72)+' '+(CY+Math.sin(a-.22)*72)+' '+(CX+Math.cos(a)*32)+' '+(CY+Math.sin(a)*32));
+  petals.appendChild(p);
+}
+for(var k=0;k<48;k++){
+  var a2=k/48*Math.PI*2,l=document.createElementNS(NS,'line');
+  l.setAttribute('x1',CX+Math.cos(a2)*137);l.setAttribute('y1',CY+Math.sin(a2)*137);
+  l.setAttribute('x2',CX+Math.cos(a2)*144);l.setAttribute('y2',CY+Math.sin(a2)*144);
+  dentil.appendChild(l);
+}
+// Archimedean spiral, ~9 turns, pitch ~16.7 < stroke-width 21
+var turns=9,maxTh=turns*Math.PI*2,b=152/maxTh,d='M'+CX+' '+CY;
+for(var th=0.12;th<=maxTh;th+=0.12){
+  var r=1.5+b*th;
+  d+=' L'+(CX+Math.cos(th)*r).toFixed(1)+' '+(CY+Math.sin(th)*r).toFixed(1);
+}
+sp.setAttribute('d',d);
+var L=sp.getTotalLength();
+sp.style.strokeDasharray=L+' '+L;
+var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var raf=null,visible=true;
+function ease(p){return p<.5?2*p*p:1-2*(1-p)*(1-p);}
+function play(){
+  if(reduced)return;
+  if(raf)cancelAnimationFrame(raf);
+  var t0=null,DUR=2500;
+  dot.style.transition='none';dot.setAttribute('opacity','1');
+  function step(ts){
+    if(t0===null)t0=ts;
+    var p=Math.min((ts-t0)/DUR,1),e=ease(p);
+    sp.style.strokeDashoffset=L*(1-e);
+    var pt=sp.getPointAtLength(L*e);
+    dot.setAttribute('cx',pt.x);dot.setAttribute('cy',pt.y);
+    if(p<1&&visible){raf=requestAnimationFrame(step);}
+    else{raf=null;sp.style.strokeDashoffset=0;dot.style.transition='opacity .8s ease .2s';dot.setAttribute('opacity','0');}
+  }
+  raf=requestAnimationFrame(step);
+}
+if(reduced){sp.style.strokeDashoffset=0;}
+else{
+  sp.style.strokeDashoffset=L;
+  var played=false;
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){
+    visible=e.isIntersecting;
+    if(e.isIntersecting&&!played){played=true;play();}
+  });},{threshold:.35});
+  io.observe(root);
+  btn.addEventListener('click',play);
+}
+})()</script>
+</div>
+<figcaption><span class="num">03</span><b>Spiral Engraver Reveal</b><i>sketch svg</i></figcaption>
+</figure>
+<figure class="card" data-tags="sketch svg scroll">
+<div class="tile" data-title="Per-Column Cascade Reveal" data-tags="sketch svg scroll">
+<style>
+.t-sketch-reveal-column-cascade{aspect-ratio:4/3;width:100%;overflow:hidden;position:relative;background:var(--cream);cursor:pointer}
+.t-sketch-reveal-column-cascade svg{display:block;width:100%;height:100%}
+.t-sketch-reveal-column-cascade .cap{position:absolute;left:14px;top:10px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:800;color:var(--navy);opacity:.55}
+.t-sketch-reveal-column-cascade .bay{transition:stroke .5s ease}
+</style>
+<div class="t-sketch-reveal-column-cascade" id="sketch-reveal-column-cascade-root">
+<svg viewBox="0 0 440 330" aria-label="Etched five-bay rowhouse revealed bay by bay on scroll">
+  <defs><mask id="sketch-reveal-column-cascade-m" maskUnits="userSpaceOnUse">
+    <rect width="440" height="330" fill="black"/>
+    <g id="sketch-reveal-column-cascade-bands" stroke="white" fill="none" stroke-linecap="butt"></g>
+  </mask></defs>
+  <g id="sketch-reveal-column-cascade-grid" stroke="var(--navy)" stroke-width=".5" opacity=".09"></g>
+  <g mask="url(#sketch-reveal-column-cascade-m)">
+    <g fill="none" stroke-width="1.5" stroke-linecap="round" id="sketch-reveal-column-cascade-art"></g>
+  </g>
+</svg>
+<div class="cap">Plate 04 — Elevation</div>
+</div>
+<script>(function(){
+var root=document.getElementById('sketch-reveal-column-cascade-root');
+var bands=document.getElementById('sketch-reveal-column-cascade-bands');
+var art=document.getElementById('sketch-reveal-column-cascade-art');
+var grid=document.getElementById('sketch-reveal-column-cascade-grid');
+var NS='http://www.w3.org/2000/svg';
+for(var gx=0;gx<=440;gx+=22){var l=document.createElementNS(NS,'line');l.setAttribute('x1',gx);l.setAttribute('y1',0);l.setAttribute('x2',gx);l.setAttribute('y2',330);grid.appendChild(l);}
+for(var gy=0;gy<=330;gy+=22){var l2=document.createElementNS(NS,'line');l2.setAttribute('x1',0);l2.setAttribute('y1',gy);l2.setAttribute('x2',440);l2.setAttribute('y2',gy);grid.appendChild(l2);}
+// artwork: five bays, bay 0 = stoop/door, bays 1-4 windows, plus cornice group
+var bayX=function(i){return 40+i*72;};
+function bayGroup(i){
+  var g=document.createElementNS(NS,'g');g.setAttribute('class','bay');g.setAttribute('stroke','var(--navy)');
+  var x=bayX(i),h='';
+  h+='<path d="M'+x+' 300 h72" stroke-width="2"/>';
+  if(i===0){h+='<rect x="'+(x+14)+'" y="216" width="44" height="84"/><path d="M'+(x+20)+' 224 h32 v70 h-32 z M'+(x+36)+' 224 v70 M'+(x+20)+' 258 h32" stroke-width="1"/><path d="M'+(x+8)+' 210 h56 M'+(x+8)+' 206 h56"/><path d="M'+(x+58)+' 300 l8 -6 h8 M'+(x+66)+' 294 v6" stroke-width="1.2"/>';}
+  else{[96,158,220].forEach(function(y){h+='<rect x="'+(x+17)+'" y="'+y+'" width="38" height="48"/><path d="M'+(x+17)+' '+(y+24)+' h38 M'+(x+36)+' '+y+' v48" stroke-width="1"/><path d="M'+(x+12)+' '+(y-5)+' h48 M'+(x+12)+' '+(y-9)+' h48" stroke-width="1.1"/><path d="M'+(x+13)+' '+(y+51)+' h46" stroke-width="1.3"/>';});}
+  if(i>0){[96,158,220].forEach(function(y){h+='<path d="M'+(x+3)+' '+(y+10)+' l6 6 M'+(x+3)+' '+(y+26)+' l6 6" stroke-width=".7" opacity=".6"/>';});}
+  h+='<path d="M'+x+' 78 V300" stroke-width="'+(i===0?'1.6':'1')+'"/>';
+  if(i===4)h+='<path d="'+'M'+(x+72)+' 78 V300" stroke-width="1.6"/>';
+  g.innerHTML=h;art.appendChild(g);return g;
+}
+var bayGroups=[];for(var i=0;i<5;i++)bayGroups.push(bayGroup(i));
+var cor=document.createElementNS(NS,'g');cor.setAttribute('stroke','var(--navy)');
+var ch='<path d="M32 78 H408 M32 56 H408 M32 56 V78 M408 56 V78 M38 66 H402" stroke-width="1.6"/>';
+for(var dx=44;dx<=400;dx+=12)ch+='<path d="M'+dx+' 60 V74" stroke-width=".9"/>';
+cor.innerHTML=ch;art.appendChild(cor);
+// mask bands: 5 vertical bands of horizontal scribble strokes + full-width cornice pass
+var strokes=[];
+function addStroke(x1,x2,y,w,start,dur){
+  var ln=document.createElementNS(NS,'line');
+  ln.setAttribute('x1',x1);ln.setAttribute('y1',y);ln.setAttribute('x2',x2);ln.setAttribute('y2',y);
+  ln.setAttribute('stroke-width',w);bands.appendChild(ln);
+  var L=Math.max(Math.abs(x2-x1),1);
+  ln.style.strokeDasharray=L+' '+L;ln.style.strokeDashoffset=L;
+  strokes.push({el:ln,L:L,start:start,dur:dur});
+}
+for(var b=0;b<5;b++){
+  var x0=bayX(b)-5,x1=bayX(b)+77,row=0;
+  for(var y=82;y<=304;y+=15){
+    var s=b*0.13+row*0.011;
+    if(row%2)addStroke(x1,x0,y,16,s,0.13);else addStroke(x0,x1,y,16,s,0.13);
+    row++;
+  }
+}
+var crow=0;
+for(var cy=50;cy<=84;cy+=13){addStroke(crow%2?412:28,crow%2?28:412,cy,15,0.72+crow*0.03,0.2);crow++;}
+var scopeBay=2,scopeOn=false;
+function render(p){
+  strokes.forEach(function(s){
+    var t=Math.min(Math.max((p-s.start)/s.dur,0),1);
+    s.el.style.strokeDashoffset=s.L*(1-t);
+  });
+  var want=p>=0.6;
+  if(want!==scopeOn){scopeOn=want;bayGroups[scopeBay].setAttribute('stroke',want?'var(--coral)':'var(--navy)');}
+}
+var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(reduced){render(1);return;}
+var running=false,pending=false,tween=null;
+function progFromScroll(){
+  var r=root.getBoundingClientRect(),vh=window.innerHeight||1;
+  return Math.min(Math.max(((vh*0.95)-r.top)/Math.max(vh*0.65,1),0),1);
+}
+function onScroll(){
+  if(tween)tween=null;
+  if(!running||pending)return;pending=true;
+  requestAnimationFrame(function(){pending=false;render(progFromScroll());});
+}
+root.addEventListener('click',function(){ // manual sweep if no scroll room
+  var t0=null;tween={};var my=tween;
+  function step(ts){if(t0===null)t0=ts;var p=Math.min((ts-t0)/2200,1);
+    if(tween!==my)return;render(p<.5?2*p*p:1-2*(1-p)*(1-p));
+    if(p<1)requestAnimationFrame(step);}
+  requestAnimationFrame(step);
+});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){
+  running=e.isIntersecting;
+  if(running)render(progFromScroll());
+});},{threshold:0});
+io.observe(root);
+window.addEventListener('scroll',onScroll,{passive:true});
+window.addEventListener('resize',onScroll,{passive:true});
+render(progFromScroll());
+})()</script>
+</div>
+<figcaption><span class="num">04</span><b>Per-Column Cascade Reveal</b><i>sketch svg scroll</i></figcaption>
+</figure>
+<figure class="card" data-tags="generative">
+<div class="tile" data-title="Blueprint Flow Field" data-tags="generative">
+<style>
+.t-blueprint-flow-field{aspect-ratio:4/3;width:100%;overflow:hidden;position:relative;background:var(--navy);cursor:pointer}
+.t-blueprint-flow-field canvas{position:absolute;inset:0;width:100%;height:100%}
+</style>
+<div class="t-blueprint-flow-field" id="blueprint-flow-field-w"><canvas id="blueprint-flow-field-c"></canvas></div>
+<script>(function(){
+var w=document.getElementById('blueprint-flow-field-w'),cv=document.getElementById('blueprint-flow-field-c'),ctx=cv.getContext('2d');
+var W=0,H=0,dpr=Math.min(window.devicePixelRatio||1,2);
+var GX=9,GY=7,lat=[],parts=[],running=false,rafId=null;
+var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function seed(){lat=[];for(var i=0;i<GX*GY;i++)lat.push(Math.random());}
+function smooth(t){return t*t*(3-2*t);}
+function noise(x,y){
+  var cw=W/(GX-1),ch=H/(GY-1);
+  var gx=Math.min(Math.max(x/cw,0),GX-1.001),gy=Math.min(Math.max(y/ch,0),GY-1.001);
+  var ix=Math.floor(gx),iy=Math.floor(gy),fx=smooth(gx-ix),fy=smooth(gy-iy);
+  var a=lat[iy*GX+ix],b=lat[iy*GX+ix+1],c=lat[(iy+1)*GX+ix],d=lat[(iy+1)*GX+ix+1];
+  return a+(b-a)*fx+((c+(d-c)*fx)-(a+(b-a)*fx))*fy;
+}
+function angleAt(x,y){var n=noise(x,y);var q=Math.min(2,Math.floor(n*3));return q*Math.PI/4;}
+function spawn(p){p.x=Math.random()*W;p.y=Math.random()*H;p.steps=0;}
+function makeParts(){parts=[];for(var i=0;i<220;i++){var p={dir:Math.random()<0.5?1:-1,coral:Math.random()<0.1};spawn(p);parts.push(p);}}
+function size(){
+  var r=w.getBoundingClientRect();W=r.width||420;H=r.height||315;
+  cv.width=Math.round(W*dpr);cv.height=Math.round(H*dpr);
+  ctx.setTransform(dpr,0,0,dpr,0,0);paintBase();
+}
+function paintBase(){ctx.fillStyle='#122138';ctx.fillRect(0,0,W,H);}
+function grid(a){
+  ctx.strokeStyle='rgba(242,240,234,'+a+')';ctx.lineWidth=1;ctx.beginPath();
+  for(var x=0.5;x<W;x+=20){ctx.moveTo(x,0);ctx.lineTo(x,H);}
+  for(var y=0.5;y<H;y+=20){ctx.moveTo(0,y);ctx.lineTo(W,y);}
+  ctx.stroke();
+}
+function step(){
+  ctx.fillStyle='rgba(18,33,56,0.02)';ctx.fillRect(0,0,W,H);
+  grid(0.012);
+  ctx.lineWidth=1;
+  for(var pass=0;pass<2;pass++){
+    ctx.strokeStyle=pass?'rgba(215,124,99,0.8)':'rgba(242,240,234,0.3)';ctx.beginPath();
+    for(var i=0;i<parts.length;i++){
+      var p=parts[i];if((pass===1)!==p.coral)continue;
+      var a=angleAt(p.x,p.y),nx=p.x+Math.cos(a)*0.8*p.dir,ny=p.y+Math.sin(a)*0.8*p.dir;
+      ctx.moveTo(p.x,p.y);ctx.lineTo(nx,ny);
+      p.x=nx;p.y=ny;p.steps++;
+      if(p.steps>200||p.x<0||p.x>W||p.y<0||p.y>H)spawn(p);
+    }
+    ctx.stroke();
+  }
+}
+function loop(){if(!running)return;step();rafId=requestAnimationFrame(loop);}
+function reseed(){seed();makeParts();paintBase();grid(0.06);if(reduced){for(var i=0;i<420;i++)step();}}
+size();reseed();
+if(!reduced){
+  var io=new IntersectionObserver(function(es){
+    var vis=es[0].isIntersecting;
+    if(vis&&!running){running=true;rafId=requestAnimationFrame(loop);}
+    else if(!vis&&running){running=false;if(rafId)cancelAnimationFrame(rafId);}
+  },{threshold:0.05});
+  io.observe(w);
+}
+w.addEventListener('click',reseed);
+window.addEventListener('resize',function(){size();reseed();});
+})()</script>
+</div>
+<figcaption><span class="num">05</span><b>Blueprint Flow Field</b><i>generative</i></figcaption>
+</figure>
+<figure class="card" data-tags="generative interactive">
+<div class="tile" data-title="Recursive Skyline Blocks" data-tags="generative interactive">
+<style>
+.t-bsp-skyline-blocks{aspect-ratio:4/3;width:100%;overflow:hidden;position:relative;background:var(--navy);cursor:pointer}
+.t-bsp-skyline-blocks canvas{position:absolute;inset:0;width:100%;height:100%}
+</style>
+<div class="t-bsp-skyline-blocks" id="bsp-skyline-blocks-w"><canvas id="bsp-skyline-blocks-c"></canvas></div>
+<script>(function(){
+var w=document.getElementById('bsp-skyline-blocks-w'),cv=document.getElementById('bsp-skyline-blocks-c'),ctx=cv.getContext('2d');
+var dpr=Math.min(window.devicePixelRatio||1,2),W=0,H=0,running=false,rafId=null,frame=0,reveal=0,bldgs=[],order=[],coralIdx=0,flick=null;
+var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function ease(t){t=Math.min(1,Math.max(0,t));return 1-Math.pow(1-t,3);}
+function gen(){
+  bldgs=[];order=[];frame=0;reveal=0;flick=null;
+  var n=6+Math.floor(Math.random()*5),ws=[],sum=0,i;
+  for(i=0;i<n;i++){var v=0.6+Math.random();ws.push(v);sum+=v;}
+  var x=0,base=H-14;
+  for(i=0;i<n;i++){
+    var bw=Math.max(18,ws[i]/sum*(W-2)),h=(0.22+Math.random()*0.6)*(H-40);
+    var b={x:x+1,w:bw-4,h:h,win:[]};
+    var wx0=b.x+3,wy=3,cw=4+Math.floor(Math.random()*3),gap=3;
+    for(var yy=wy;yy+cw<h-4;yy+=cw+gap)for(var xx=wx0;xx+cw<b.x+b.w-3;xx+=cw+gap)
+      b.win.push({x:xx,dy:yy+cw,s:cw,lit:Math.random()>0.2});
+    bldgs.push(b);x+=bw;
+  }
+  coralIdx=Math.floor(Math.random()*n);
+  var idx=[];bldgs.forEach(function(b,bi){b.win.forEach(function(wn,wi){idx.push([bi,wi]);});});
+  for(i=idx.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),t=idx[i];idx[i]=idx[j];idx[j]=t;}
+  order=idx;
+  var byH=bldgs.map(function(b,bi){return[b.h,bi];}).sort(function(a,b){return b[0]-a[0];});
+  bldgs.tallest=[byH[0][1],byH.length>1?byH[1][1]:byH[0][1]];
+}
+function tower(b,base,h){
+  var cx=b.x+b.w*0.5,ty=base-h;
+  ctx.strokeStyle='rgba(242,240,234,0.9)';ctx.lineWidth=1;ctx.beginPath();
+  ctx.moveTo(cx-5,ty);ctx.lineTo(cx-4,ty-6);ctx.moveTo(cx+5,ty);ctx.lineTo(cx+4,ty-6);
+  ctx.rect(cx-6,ty-16,12,10);ctx.moveTo(cx-6,ty-16);ctx.lineTo(cx,ty-22);ctx.lineTo(cx+6,ty-16);ctx.stroke();
+}
+function draw(){
+  ctx.fillStyle='#122138';ctx.fillRect(0,0,W,H);
+  var base=H-14,g=ease(frame/60);
+  ctx.strokeStyle='rgba(242,240,234,0.5)';ctx.lineWidth=1;
+  ctx.beginPath();ctx.moveTo(0,base+0.5);ctx.lineTo(W,base+0.5);ctx.stroke();
+  bldgs.forEach(function(b,bi){
+    var h=b.h*g,top=base-h;
+    if(bi===coralIdx){ctx.fillStyle='#D77C63';ctx.fillRect(b.x,top,b.w,h);}
+    ctx.strokeStyle='#F2F0EA';ctx.lineWidth=1;ctx.strokeRect(b.x+0.5,top+0.5,b.w-1,h-1);
+    if(bi===coralIdx&&h>8){
+      ctx.save();ctx.beginPath();ctx.rect(b.x,top,b.w,h);ctx.clip();
+      ctx.strokeStyle='rgba(242,240,234,0.45)';ctx.beginPath();
+      for(var d=-h;d<b.w+h;d+=8){ctx.moveTo(b.x+d,base);ctx.lineTo(b.x+d+h,top);ctx.moveTo(b.x+d,top);ctx.lineTo(b.x+d+h,base);}
+      ctx.stroke();ctx.restore();
+    }
+    if(g>=1&&(bi===bldgs.tallest[0]||bi===bldgs.tallest[1]))tower(b,base,h);
+  });
+  var lim=Math.min(reveal,order.length);
+  for(var k=0;k<lim;k++){
+    var bi=order[k][0],b=bldgs[bi],wn=b.win[order[k][1]];
+    if(bi===coralIdx)continue;
+    var y=base-b.h*g+ (wn.dy-wn.s);if(wn.dy>b.h*g-3)continue;
+    var on=wn.lit;
+    if(flick&&flick[0]===bi&&flick[1]===order[k][1])on=!on;
+    if(on){ctx.fillStyle='rgba(242,240,234,0.9)';ctx.fillRect(wn.x,y,wn.s,wn.s);}
+    else{ctx.strokeStyle='rgba(242,240,234,0.28)';ctx.strokeRect(wn.x+0.5,y+0.5,wn.s-1,wn.s-1);}
+  }
+}
+function loop(){
+  if(!running)return;
+  frame++;
+  if(frame>60)reveal+=3;
+  if(reveal>order.length+30&&Math.random()<0.02&&order.length){
+    var pick=order[Math.floor(Math.random()*order.length)];flick=pick;
+    setTimeout(function(){flick=null;},260);
+  }
+  draw();rafId=requestAnimationFrame(loop);
+}
+function size(){var r=w.getBoundingClientRect();W=r.width||420;H=r.height||315;cv.width=Math.round(W*dpr);cv.height=Math.round(H*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);}
+size();gen();
+if(reduced){frame=61;reveal=order.length;draw();}
+else{
+  var io=new IntersectionObserver(function(es){
+    var vis=es[0].isIntersecting;
+    if(vis&&!running){running=true;rafId=requestAnimationFrame(loop);}
+    else if(!vis&&running){running=false;if(rafId)cancelAnimationFrame(rafId);}
+  },{threshold:0.05});
+  io.observe(w);
+}
+w.addEventListener('click',function(){gen();if(reduced){frame=61;reveal=order.length;draw();}});
+window.addEventListener('resize',function(){size();gen();if(reduced){frame=61;reveal=order.length;draw();}});
+})()</script>
+</div>
+<figcaption><span class="num">06</span><b>Recursive Skyline Blocks</b><i>generative interactive</i></figcaption>
+</figure>
+<figure class="card" data-tags="generative">
+<div class="tile" data-title="Truchet Conduit Routing" data-tags="generative">
+<style>
+.t-truchet-conduit{aspect-ratio:4/3;width:100%;overflow:hidden;position:relative;background:var(--navy)}
+.t-truchet-conduit canvas{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}
+</style>
+<div class="t-truchet-conduit" id="truchet-conduit-w"><canvas id="truchet-conduit-b"></canvas><canvas id="truchet-conduit-o"></canvas></div>
+<script>(function(){
+var w=document.getElementById('truchet-conduit-w'),cb=document.getElementById('truchet-conduit-b'),co=document.getElementById('truchet-conduit-o');
+var bctx=cb.getContext('2d'),octx=co.getContext('2d');
+var N=10,S=0,dpr=Math.min(window.devicePixelRatio||1,2),grid=[],running=false,rafId=null,frame=0,hover=false;
+var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function size(){
+  var r=w.getBoundingClientRect(),side=Math.min(r.width||420,r.height||315)-24;
+  S=side/N;
+  [cb,co].forEach(function(c){c.width=Math.round(side*dpr);c.height=Math.round(side*dpr);c.style.width=side+'px';c.style.height=side+'px';});
+  bctx.setTransform(dpr,0,0,dpr,0,0);octx.setTransform(dpr,0,0,dpr,0,0);
+}
+function seed(){grid=[];for(var i=0;i<N*N;i++)grid.push(Math.random()<0.5?0:1);}
+function arcs(ctx,r,c,t){
+  var x=c*S,y=r*S,h=S/2;
+  ctx.beginPath();
+  if(t===0){ctx.arc(x,y,h,0,Math.PI/2);ctx.moveTo(x+S-h,y+S);ctx.arc(x+S,y+S,h,Math.PI,Math.PI*1.5);}
+  else{ctx.moveTo(x+S,y+h);ctx.arc(x+S,y,h,Math.PI/2,Math.PI);ctx.moveTo(x,y+S-h);ctx.arc(x,y+S,h,Math.PI*1.5,Math.PI*2);}
+  ctx.stroke();
+}
+function cell(r,c){
+  var x=c*S,y=r*S;
+  bctx.fillStyle='#122138';bctx.fillRect(x,y,S,S);
+  bctx.strokeStyle='rgba(242,240,234,0.85)';bctx.lineWidth=1;
+  arcs(bctx,r,c,grid[r*N+c]);
+  bctx.fillStyle='rgba(242,240,234,0.5)';
+  for(var dr=0;dr<2;dr++)for(var dc=0;dc<2;dc++){bctx.beginPath();bctx.arc(x+dc*S,y+dr*S,1.1,0,Math.PI*2);bctx.fill();}
+}
+function drawBase(){bctx.fillStyle='#122138';bctx.fillRect(0,0,N*S,N*S);for(var r=0;r<N;r++)for(var c=0;c<N;c++)cell(r,c);}
+var M=[{0:3,3:0,1:2,2:1},{0:1,1:0,2:3,3:2}];
+function segArc(ctx,r,c,e1,e2){
+  var x=c*S,y=r*S,h=S/2,lo=Math.min(e1,e2),hi=Math.max(e1,e2);
+  ctx.beginPath();
+  if(lo===0&&hi===3)ctx.arc(x,y,h,0,Math.PI/2);
+  else if(lo===1&&hi===2)ctx.arc(x+S,y+S,h,Math.PI,Math.PI*1.5);
+  else if(lo===0&&hi===1)ctx.arc(x+S,y,h,Math.PI/2,Math.PI);
+  else ctx.arc(x,y+S,h,Math.PI*1.5,Math.PI*2);
+  ctx.stroke();
+}
+function walk(){
+  octx.clearRect(0,0,N*S,N*S);
+  octx.strokeStyle='#D77C63';octx.lineWidth=2;octx.lineCap='round';
+  var r=Math.floor(N/2),c=0,entry=3,steps=0;
+  while(r>=0&&r<N&&c>=0&&c<N&&steps<N*N*2){
+    var t=grid[r*N+c],exit=M[t][entry];
+    segArc(octx,r,c,entry,exit);
+    if(exit===0){r--;entry=2;}else if(exit===1){c++;entry=3;}
+    else if(exit===2){r++;entry=0;}else{c--;entry=1;}
+    steps++;
+  }
+}
+function loop(){
+  if(!running)return;
+  frame++;
+  if(!hover&&frame%12===0){
+    var i=Math.floor(Math.random()*N*N);
+    grid[i]=1-grid[i];
+    cell(Math.floor(i/N),i%N);
+    walk();
+  }
+  rafId=requestAnimationFrame(loop);
+}
+function build(){size();seed();drawBase();walk();}
+build();
+if(!reduced){
+  var io=new IntersectionObserver(function(es){
+    var vis=es[0].isIntersecting;
+    if(vis&&!running){running=true;rafId=requestAnimationFrame(loop);}
+    else if(!vis&&running){running=false;if(rafId)cancelAnimationFrame(rafId);}
+  },{threshold:0.05});
+  io.observe(w);
+  w.addEventListener('mouseenter',function(){hover=true;});
+  w.addEventListener('mouseleave',function(){hover=false;});
+}
+window.addEventListener('resize',build);
+})()</script>
+</div>
+<figcaption><span class="num">07</span><b>Truchet Conduit Routing</b><i>generative</i></figcaption>
+</figure>
+<figure class="card" data-tags="generative">
+<div class="tile" data-title="Rivet &amp; Medallion Packing" data-tags="generative">
+<style>
+.t-circle-packing-medallions{aspect-ratio:4/3;width:100%;overflow:hidden;position:relative;background:var(--navy);cursor:pointer}
+.t-circle-packing-medallions canvas{position:absolute;inset:0;width:100%;height:100%}
+</style>
+<div class="t-circle-packing-medallions" id="circle-packing-medallions-w"><canvas id="circle-packing-medallions-c"></canvas></div>
+<script>(function(){
+var w=document.getElementById('circle-packing-medallions-w'),cv=document.getElementById('circle-packing-medallions-c'),ctx=cv.getContext('2d');
+var dpr=Math.min(window.devicePixelRatio||1,2),W=0,H=0,circles=[],done=false,fails=0,running=false,rafId=null,t0=0,bake=null;
+var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function size(){var r=w.getBoundingClientRect();W=r.width||420;H=r.height||315;cv.width=Math.round(W*dpr);cv.height=Math.round(H*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);}
+function tryPlace(){
+  var x=6+Math.random()*(W-12),y=6+Math.random()*(H-12),i,c;
+  var maxr=Math.min(x-3,y-3,W-3-x,H-3-y,36);
+  for(i=0;i<circles.length;i++){
+    c=circles[i];
+    var d=Math.hypot(x-c.x,y-c.y)-c.r-1.5;
+    if(d<2)return false;
+    if(d<maxr)maxr=d;
+  }
+  if(maxr<2)return false;
+  circles.push({x:x,y:y,r:maxr,coral:Math.random()<0.08});
+  return true;
+}
+function hatch(g,c,cross,alpha,color){
+  g.save();g.beginPath();g.arc(c.x,c.y,c.r,0,Math.PI*2);g.clip();
+  g.translate(c.x,c.y);g.strokeStyle=color;g.globalAlpha=alpha;g.lineWidth=1;
+  for(var f=0;f<(cross?2:1);f++){
+    g.rotate(f?Math.PI/2:Math.PI/4);g.beginPath();
+    for(var y=-c.r;y<=c.r;y+=3){g.moveTo(-c.r,y);g.lineTo(c.r,y);}
+    g.stroke();
+  }
+  g.restore();
+}
+function drawCircle(g,c,big,alpha){
+  var col=c.coral?'#D77C63':'#F2F0EA';
+  hatch(g,c,big,alpha!==undefined?alpha:(c.coral?0.75:0.5),col);
+  g.globalAlpha=1;g.strokeStyle=col;g.lineWidth=1;
+  g.beginPath();g.arc(c.x,c.y,c.r,0,Math.PI*2);g.stroke();
+  if(big){g.beginPath();g.moveTo(c.x-3,c.y);g.lineTo(c.x+3,c.y);g.moveTo(c.x,c.y-3);g.lineTo(c.x,c.y+3);g.stroke();}
+}
+function bigSet(){
+  return circles.slice().sort(function(a,b){return b.r-a.r;}).slice(0,3);
+}
+function render(g,tm){
+  g.fillStyle='#122138';g.fillRect(0,0,W,H);
+  var bigs=bigSet();
+  circles.forEach(function(c){
+    var big=bigs.indexOf(c)>=0;
+    var a=c.coral?0.45+0.35*Math.sin(tm*0.003+c.x):(0.5);
+    drawCircle(g,c,big,c.coral?Math.max(0.1,a):0.5);
+  });
+}
+function bakeBase(){
+  bake=document.createElement('canvas');bake.width=cv.width;bake.height=cv.height;
+  var g=bake.getContext('2d');g.setTransform(dpr,0,0,dpr,0,0);
+  g.fillStyle='#122138';g.fillRect(0,0,W,H);
+  var bigs=bigSet();
+  circles.forEach(function(c){if(!c.coral)drawCircle(g,c,bigs.indexOf(c)>=0);});
+}
+function loop(tm){
+  if(!running)return;
+  if(!done){
+    for(var i=0;i<30;i++){if(tryPlace())fails=0;else fails++;}
+    if(fails>1500||circles.length>=280){done=true;bakeBase();}
+    render(ctx,tm);
+  }else{
+    ctx.drawImage(bake,0,0,W,H);
+    var bigs=bigSet();
+    circles.forEach(function(c){
+      if(c.coral)drawCircle(ctx,c,bigs.indexOf(c)>=0,Math.max(0.12,0.45+0.35*Math.sin(tm*0.003+c.x)));
+    });
+  }
+  rafId=requestAnimationFrame(loop);
+}
+function reset(){
+  circles=[];done=false;fails=0;bake=null;
+  if(reduced){
+    var guard=0;
+    while(fails<2000&&circles.length<280&&guard<60000){guard++;if(tryPlace())fails=0;else fails++;}
+    render(ctx,0);
+  }
+}
+size();reset();
+if(!reduced){
+  var io=new IntersectionObserver(function(es){
+    var vis=es[0].isIntersecting;
+    if(vis&&!running){running=true;rafId=requestAnimationFrame(loop);}
+    else if(!vis&&running){running=false;if(rafId)cancelAnimationFrame(rafId);}
+  },{threshold:0.05});
+  io.observe(w);
+}
+w.addEventListener('click',reset);
+window.addEventListener('resize',function(){size();reset();});
+})()</script>
+</div>
+<figcaption><span class="num">08</span><b>Rivet &amp; Medallion Packing</b><i>generative</i></figcaption>
+</figure>
+<figure class="card" data-tags="generative">
+<div class="tile" data-title="Self-Avoiding Draftsman" data-tags="generative">
+<div class="t-walker-draftsman" id="walker-draftsman-wrap">
+<style>
+.t-walker-draftsman{aspect-ratio:4/3;width:100%;overflow:hidden;position:relative;background:var(--navy);}
+.t-walker-draftsman canvas{position:absolute;inset:0;width:100%;height:100%;display:block;}
+</style>
+<canvas id="walker-draftsman-c"></canvas>
+<script>(function(){
+var wrap=document.getElementById('walker-draftsman-wrap'),c=document.getElementById('walker-draftsman-c');
+var ctx=c.getContext('2d'),dpr=Math.min(2,window.devicePixelRatio||1);
+var W=420,H=315,r=wrap.getBoundingClientRect();if(r.width>10){W=Math.round(r.width);H=Math.round(r.width*3/4);}
+c.width=W*dpr;c.height=H*dpr;ctx.scale(dpr,dpr);
+var trail=document.createElement('canvas');trail.width=W*dpr;trail.height=H*dpr;
+var tx=trail.getContext('2d');tx.scale(dpr,dpr);
+var CELL=6,cols=Math.floor(W/CELL),rows=Math.floor(H/CELL),total=cols*rows;
+var visited=new Uint8Array(total),count=0;
+var DIRS=[[1,0],[0,1],[-1,0],[0,-1]];
+var cx=0,cy=0,dir=0,mode='draw',pauseT=0,fadeT=0;
+function P(v){return v*CELL+CELL/2;}
+function free(x,y){return x>=0&&y>=0&&x<cols&&y<rows&&!visited[y*cols+x];}
+function mark(x,y){if(!visited[y*cols+x]){visited[y*cols+x]=1;count++;}}
+function motif(x,y){
+  tx.strokeStyle='rgba(242,240,234,0.7)';tx.lineWidth=1;var m=Math.random();
+  tx.beginPath();
+  if(m<0.34){tx.arc(x,y,3,0,6.2832);}
+  else if(m<0.67){var pd=DIRS[(dir+1)%4];tx.moveTo(x-pd[0]*4,y-pd[1]*4);tx.lineTo(x+pd[0]*4,y+pd[1]*4);}
+  else{tx.moveTo(x-3,y);tx.lineTo(x+3,y);tx.moveTo(x,y-3);tx.lineTo(x,y+3);}
+  tx.stroke();
+}
+function restart(){
+  for(var i=0;i<300;i++){var x=(Math.random()*cols)|0,y=(Math.random()*rows)|0;
+    if(!visited[y*cols+x]){cx=x;cy=y;dir=(Math.random()*4)|0;mark(cx,cy);return true;}}
+  for(var j=0;j<total;j++)if(!visited[j]){cy=(j/cols)|0;cx=j%cols;dir=(Math.random()*4)|0;mark(cx,cy);return true;}
+  return false;
+}
+function step(){
+  var nd=dir;
+  var s=DIRS[dir],sf=free(cx+s[0],cy+s[1]);
+  if(!(sf&&Math.random()<0.8)){
+    var cand=[];
+    if(free(cx+DIRS[(dir+1)%4][0],cy+DIRS[(dir+1)%4][1]))cand.push((dir+1)%4);
+    if(free(cx+DIRS[(dir+3)%4][0],cy+DIRS[(dir+3)%4][1]))cand.push((dir+3)%4);
+    if(cand.length)nd=cand[(Math.random()*cand.length)|0];
+    else if(!sf){mode='pause';pauseT=20;return;}
+  }
+  if(nd!==dir&&Math.random()<0.15)motif(P(cx),P(cy));
+  dir=nd;var d=DIRS[dir],ox=P(cx),oy=P(cy);
+  cx+=d[0];cy+=d[1];mark(cx,cy);
+  tx.strokeStyle='rgba(242,240,234,0.7)';tx.lineWidth=1;
+  tx.beginPath();tx.moveTo(ox,oy);tx.lineTo(P(cx),P(cy));tx.stroke();
+  if(count/total>=0.6){mode='fade';fadeT=45;}
+}
+function draw(lifted){
+  ctx.fillStyle='#122138';ctx.fillRect(0,0,W,H);
+  ctx.drawImage(trail,0,0,W,H);
+  ctx.strokeStyle='rgba(242,240,234,0.28)';ctx.lineWidth=1;
+  ctx.beginPath();ctx.moveTo(W-96,H-10.5);ctx.lineTo(W-10,H-10.5);ctx.moveTo(W-96,H-22.5);ctx.lineTo(W-10,H-22.5);ctx.moveTo(W-52.5,H-22.5);ctx.lineTo(W-52.5,H-10.5);ctx.stroke();
+  ctx.fillStyle='rgba(242,240,234,0.35)';ctx.font='800 6px Archivo,sans-serif';
+  ctx.fillText('KNS',W-92,H-14);ctx.fillText('SETTING-OUT',W-49,H-14);
+  var hx=P(cx),hy=P(cy);
+  if(lifted){ctx.strokeStyle='#D77C63';ctx.strokeRect(hx-2.5,hy-2.5,5,5);}
+  else{ctx.fillStyle='#D77C63';ctx.fillRect(hx-2,hy-2,4,4);}
+}
+restart();
+var running=false,rafId=0;
+function frame(){
+  if(!running)return;
+  if(mode==='draw'){for(var i=0;i<3&&mode==='draw';i++)step();}
+  else if(mode==='pause'){if(--pauseT<=0){mode=restart()?'draw':'fade';fadeT=45;}}
+  else if(mode==='fade'){
+    tx.fillStyle='rgba(18,33,56,0.12)';tx.fillRect(0,0,W,H);
+    if(--fadeT<=0){tx.clearRect(0,0,W,H);visited.fill(0);count=0;restart();mode='draw';}
+  }
+  draw(mode==='pause');
+  rafId=requestAnimationFrame(frame);
+}
+var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(reduce){
+  for(var i=0;i<6000;i++){if(mode==='pause'){pauseT=0;mode=restart()?'draw':'fade';}if(mode==='fade')break;step();}
+  draw(false);
+}else{
+  new IntersectionObserver(function(es){
+    var vis=es[0].isIntersecting;
+    if(vis&&!running){running=true;rafId=requestAnimationFrame(frame);}
+    else if(!vis){running=false;cancelAnimationFrame(rafId);}
+  }).observe(wrap);
+}
+})()</script>
+</div>
+</div>
+<figcaption><span class="num">09</span><b>Self-Avoiding Draftsman</b><i>generative</i></figcaption>
+</figure>
+<figure class="card" data-tags="generative">
+<div class="tile" data-title="Settlement Survey Contours" data-tags="generative">
+<div class="t-interference-contours" id="interference-contours-wrap">
+<style>
+.t-interference-contours{aspect-ratio:4/3;width:100%;overflow:hidden;position:relative;background:var(--navy2);}
+.t-interference-contours canvas{position:absolute;inset:0;width:100%;height:100%;display:block;}
+</style>
+<canvas id="interference-contours-c"></canvas>
+<script>(function(){
+var wrap=document.getElementById('interference-contours-wrap'),c=document.getElementById('interference-contours-c');
+var ctx=c.getContext('2d'),dpr=Math.min(2,window.devicePixelRatio||1);
+var W=420,H=315,r=wrap.getBoundingClientRect();if(r.width>10){W=Math.round(r.width);H=Math.round(r.width*3/4);}
+c.width=W*dpr;c.height=H*dpr;ctx.scale(dpr,dpr);
+var S=3,gw=Math.ceil(W/S),gh=Math.ceil(H/S),n=gw*gh;
+var buf=document.createElement('canvas');buf.width=gw;buf.height=gh;
+var bx=buf.getContext('2d'),img=bx.createImageData(gw,gh),px=img.data;
+var fp={x:W*0.32,y:H*0.35,w:W*0.36,h:H*0.30};
+var srcs=[
+ {ax:fp.x,ay:fp.y,ph:0,k:0.115},
+ {ax:fp.x+fp.w,ay:fp.y,ph:2.1,k:0.10},
+ {ax:fp.x+fp.w*0.5,ay:fp.y+fp.h,ph:4.2,k:0.125}
+];
+var dist=[new Float32Array(n),new Float32Array(n),new Float32Array(n)];
+var band=new Int16Array(n);
+function computeDist(i,t){
+  var s=srcs[i],sx=s.ax+9*Math.sin(t*0.11+s.ph),sy=s.ay+7*Math.sin(t*0.083+s.ph*1.7);
+  var d=dist[i],idx=0;
+  for(var y=0;y<gh;y++){var dy=y*S-sy,dy2=dy*dy;
+    for(var x=0;x<gw;x++,idx++){var dx=x*S-sx;d[idx]=Math.sqrt(dx*dx+dy2);}}
+}
+var NAVY=[13,26,46],CREAM=[242,240,234],CORAL=[227,119,107];
+function render(t){
+  var d0=dist[0],d1=dist[1],d2=dist[2],k0=srcs[0].k,k1=srcs[1].k,k2=srcs[2].k,i;
+  for(i=0;i<n;i++){
+    var v=Math.sin(d0[i]*k0-t)+Math.sin(d1[i]*k1-t*1.13)+Math.sin(d2[i]*k2-t*0.9);
+    band[i]=Math.floor((v+3.2)/0.34);
+  }
+  var p=0;
+  for(i=0;i<n;i++,p+=4){
+    var b=band[i],x=i%gw,edge=0,nb=b;
+    if(x>0&&band[i-1]!==b){edge=1;nb=Math.min(nb,band[i-1]);}
+    if(i>=gw&&band[i-gw]!==b){edge=1;nb=Math.min(nb,band[i-gw]);}
+    var col=NAVY;
+    if(edge)col=(nb%5===0)?CORAL:CREAM;
+    px[p]=col[0];px[p+1]=col[1];px[p+2]=col[2];px[p+3]=edge?(nb%5===0?255:200):255;
+  }
+  bx.putImageData(img,0,0);
+  ctx.imageSmoothingEnabled=false;
+  ctx.drawImage(buf,0,0,gw,gh,0,0,gw*S,gh*S);
+  ctx.strokeStyle='rgba(242,240,234,0.85)';ctx.lineWidth=1.5;
+  ctx.strokeRect(fp.x,fp.y,fp.w,fp.h);
+  ctx.strokeStyle='rgba(242,240,234,0.5)';ctx.lineWidth=1;
+  ctx.strokeRect(fp.x+5,fp.y+5,fp.w-10,fp.h-10);
+  ctx.beginPath();ctx.moveTo(fp.x+fp.w*0.42,fp.y+fp.h);ctx.lineTo(fp.x+fp.w*0.42,fp.y+fp.h-9);
+  ctx.lineTo(fp.x+fp.w*0.58,fp.y+fp.h-9);ctx.lineTo(fp.x+fp.w*0.58,fp.y+fp.h);ctx.stroke();
+  ctx.fillStyle='#D77C63';
+  for(var s2=0;s2<3;s2++){var sc=srcs[s2];
+    ctx.fillRect(sc.ax+9*Math.sin(t*0.11+sc.ph)-1.5,sc.ay+7*Math.sin(t*0.083+sc.ph*1.7)-1.5,3,3);}
+  ctx.font='700 9px ui-monospace,Menlo,monospace';
+  lab(W*0.13,H*0.2,'+2mm');lab(W*0.8,H*0.78,'-1mm');lab(W*0.78,H*0.14,'+1mm');
+  ctx.fillStyle='rgba(242,240,234,0.4)';ctx.font='800 7px Archivo,sans-serif';
+  ctx.fillText('SETTLEMENT MONITORING — PLOT 04',10,H-10);
+}
+function lab(x,y,s){
+  ctx.fillStyle='rgba(13,26,46,0.75)';ctx.fillRect(x-3,y-9,ctx.measureText(s).width+6,12);
+  ctx.fillStyle='#E3776B';ctx.fillText(s,x,y);
+}
+var t=0,frameN=0,running=false,rafId=0;
+computeDist(0,0);computeDist(1,0);computeDist(2,0);
+function frame(){
+  if(!running)return;
+  t+=0.035;frameN++;
+  computeDist(frameN%3,t);
+  render(t);
+  rafId=requestAnimationFrame(frame);
+}
+if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){render(2.5);}
+else{
+  new IntersectionObserver(function(es){
+    var vis=es[0].isIntersecting;
+    if(vis&&!running){running=true;rafId=requestAnimationFrame(frame);}
+    else if(!vis){running=false;cancelAnimationFrame(rafId);}
+  }).observe(wrap);
+}
+})()</script>
+</div>
+</div>
+<figcaption><span class="num">10</span><b>Settlement Survey Contours</b><i>generative</i></figcaption>
+</figure>
+<figure class="card" data-tags="generative sketch">
+<div class="tile" data-title="Cross-Hatch Plate Engraving" data-tags="generative sketch">
+<div class="t-etched-hatch-facade" id="etched-hatch-facade-wrap">
+<style>
+.t-etched-hatch-facade{aspect-ratio:4/3;width:100%;overflow:hidden;position:relative;background:var(--cream);cursor:pointer;}
+.t-etched-hatch-facade canvas{position:absolute;inset:0;width:100%;height:100%;display:block;}
+.t-etched-hatch-facade .hint{position:absolute;right:10px;bottom:8px;font-size:7px;font-weight:800;letter-spacing:.14em;color:var(--coral);opacity:.75;pointer-events:none;}
+</style>
+<canvas id="etched-hatch-facade-c"></canvas>
+<div class="hint">CLICK — RESTRIKE PLATE</div>
+<script>(function(){
+var wrap=document.getElementById('etched-hatch-facade-wrap'),c=document.getElementById('etched-hatch-facade-c');
+var ctx=c.getContext('2d'),dpr=Math.min(2,window.devicePixelRatio||1);
+var W=420,H=315,r=wrap.getBoundingClientRect();if(r.width>10){W=Math.round(r.width);H=Math.round(r.width*3/4);}
+c.width=W*dpr;c.height=H*dpr;ctx.scale(dpr,dpr);
+var off=document.createElement('canvas');off.width=W;off.height=H;var ox=off.getContext('2d');
+var segs=[],cursor=0,idleT=0,door={x:0,y:0,w:0,h:0};
+function g(v){return 'rgb('+v+','+v+','+v+')';}
+function buildElevation(){
+  ox.fillStyle=g(255);ox.fillRect(0,0,W,H);
+  var fx=W*0.24,fw=W*0.52,fy=H*0.16,fb=H*0.9,fh=fb-fy;
+  var grad=ox.createLinearGradient(fx,0,fx+fw,0);
+  grad.addColorStop(0,g(150));grad.addColorStop(0.28,g(225));grad.addColorStop(1,g(185));
+  ox.fillStyle=grad;ox.fillRect(fx,fy,fw,fh);
+  var par=(Math.random()*3)|0;
+  ox.fillStyle=g(120);
+  if(par===0){ox.fillRect(fx-6,fy-8,fw+12,10);}
+  else if(par===1){for(var s=0;s<5;s++)ox.fillRect(fx+s*fw/5+3,fy-6-(s%2)*5,fw/5-6,8+(s%2)*5);}
+  else{ox.beginPath();ox.moveTo(fx-6,fy+2);ox.lineTo(fx+fw/2,fy-20);ox.lineTo(fx+fw+6,fy+2);ox.closePath();ox.fill();}
+  ox.fillStyle=g(105);ox.fillRect(fx-8,fy+fh*0.30,fw+16,5);
+  var floors=2+((Math.random()*2)|0),nw=2+((Math.random()*3)|0);
+  var doorBay=(Math.random()*nw)|0;
+  for(var f=0;f<floors;f++){
+    var wy=fy+fh*0.12+f*(fh*0.78/floors),wh=fh*0.78/floors*0.62;
+    for(var b=0;b<nw;b++){
+      var bw=fw/nw,wx=fx+b*bw+bw*0.24,ww=bw*0.52;
+      if(f===floors-1&&b===doorBay){
+        door={x:fx+b*bw+bw*0.18,y:fb-fh*0.34,w:bw*0.64,h:fh*0.34};
+        ox.fillStyle=g(95);
+        ox.beginPath();ox.moveTo(door.x,door.y+door.h);ox.lineTo(door.x,door.y+door.w/2);
+        ox.arc(door.x+door.w/2,door.y+door.w/2,door.w/2,Math.PI,0);
+        ox.lineTo(door.x+door.w,door.y+door.h);ox.closePath();ox.fill();continue;
+      }
+      var wg=ox.createLinearGradient(wx,wy,wx+ww,wy+wh);
+      wg.addColorStop(0,g(40));wg.addColorStop(1,g(95));
+      ox.fillStyle=wg;
+      ox.beginPath();ox.moveTo(wx,wy+wh);ox.lineTo(wx,wy+ww/2);
+      ox.arc(wx+ww/2,wy+ww/2,ww/2,Math.PI,0);
+      ox.lineTo(wx+ww,wy+wh);ox.closePath();ox.fill();
+      ox.fillStyle=g(160);ox.fillRect(wx-3,wy+wh,ww+6,3);
+    }
+  }
+  ox.fillStyle=g(140);ox.fillRect(fx-14,fb,fw+28,4);
+  ox.fillStyle=g(210);ox.fillRect(0,fb+4,W,H-fb-4);
+}
+function genSegs(){
+  segs=[];cursor=0;
+  var data=ox.getImageData(0,0,W,H).data;
+  function lum(x,y){x|=0;y|=0;if(x<0||y<0||x>=W||y>=H)return 255;return data[(y*W+x)*4];}
+  var fams=[[Math.PI/4,200],[-Math.PI/4,130],[0,70]];
+  var D=Math.sqrt(W*W+H*H)/2,cx0=W/2,cy0=H/2;
+  for(var fI=0;fI<3;fI++){
+    var a=fams[fI][0],thr=fams[fI][1],dx=Math.cos(a),dy=Math.sin(a),nx=-dy,ny=dx;
+    for(var o=-D;o<=D;o+=4){
+      var run=null;
+      for(var t=-D;t<=D+2;t+=2){
+        var x=cx0+nx*o+dx*t,y=cy0+ny*o+dy*t;
+        var on=t<=D&&x>=2&&y>=2&&x<W-2&&y<H-2&&lum(x,y)<thr;
+        if(on&&!run)run={x1:x,y1:y};
+        else if(!on&&run){
+          var x2=cx0+nx*o+dx*(t-2),y2=cy0+ny*o+dy*(t-2);
+          if((x2-run.x1)*(x2-run.x1)+(y2-run.y1)*(y2-run.y1)>9){
+            var mx=(run.x1+x2)/2,my=(run.y1+y2)/2;
+            segs.push({x1:run.x1+Math.random()-0.5,y1:run.y1+Math.random()-0.5,
+              x2:x2+Math.random()-0.5,y2:y2+Math.random()-0.5,
+              cor:mx>door.x&&mx<door.x+door.w&&my>door.y&&my<door.y+door.h});
+          }
+          run=null;
+        }
+      }
+    }
+  }
+  segs.sort(function(p,q){return Math.min(p.y1,p.y2)-Math.min(q.y1,q.y2);});
+  ctx.fillStyle='#F2F0EA';ctx.fillRect(0,0,W,H);
+  ctx.strokeStyle='rgba(18,33,56,0.5)';ctx.lineWidth=1;
+  ctx.strokeRect(8.5,8.5,W-17,H-17);
+}
+function drawSome(nDraw){
+  var end=Math.min(cursor+nDraw,segs.length);
+  ctx.lineWidth=0.8;
+  for(var i=cursor;i<end;i++){var s=segs[i];
+    ctx.strokeStyle=s.cor?'rgba(215,124,99,0.9)':'rgba(18,33,56,0.85)';
+    ctx.beginPath();ctx.moveTo(s.x1,s.y1);ctx.lineTo(s.x2,s.y2);ctx.stroke();}
+  cursor=end;
+}
+function regen(){buildElevation();genSegs();idleT=0;}
+regen();
+var running=false,rafId=0;
+var per=Math.max(40,Math.ceil(segs.length/170));
+function frame(){
+  if(!running)return;
+  if(cursor<segs.length){per=Math.max(40,Math.ceil(segs.length/170));drawSome(per);}
+  else if(++idleT>560){regen();}
+  rafId=requestAnimationFrame(frame);
+}
+wrap.addEventListener('click',function(){regen();if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)drawSome(segs.length);});
+if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){drawSome(segs.length);}
+else{
+  new IntersectionObserver(function(es){
+    var vis=es[0].isIntersecting;
+    if(vis&&!running){running=true;rafId=requestAnimationFrame(frame);}
+    else if(!vis){running=false;cancelAnimationFrame(rafId);}
+  }).observe(wrap);
+}
+})()</script>
+</div>
+</div>
+<figcaption><span class="num">11</span><b>Cross-Hatch Plate Engraving</b><i>generative sketch</i></figcaption>
+</figure>
+<figure class="card" data-tags="generative">
+<div class="tile" data-title="Stone Grain Reaction" data-tags="generative">
+<div class="t-grayscott-weathering" id="grayscott-weathering-wrap">
+<style>
+.t-grayscott-weathering{aspect-ratio:4/3;width:100%;overflow:hidden;position:relative;background:var(--navy);}
+.t-grayscott-weathering canvas{position:absolute;inset:0;width:100%;height:100%;display:block;image-rendering:pixelated;}
+</style>
+<canvas id="grayscott-weathering-c"></canvas>
+<script>(function(){
+var wrap=document.getElementById('grayscott-weathering-wrap'),c=document.getElementById('grayscott-weathering-c');
+var ctx=c.getContext('2d'),dpr=Math.min(2,window.devicePixelRatio||1);
+var W=420,H=315,r=wrap.getBoundingClientRect();if(r.width>10){W=Math.round(r.width);H=Math.round(r.width*3/4);}
+c.width=W*dpr;c.height=H*dpr;ctx.scale(dpr,dpr);
+var N=100,NN=N*N;
+var A=new Float32Array(NN),B=new Float32Array(NN),A2=new Float32Array(NN),B2=new Float32Array(NN),Bsnap=new Float32Array(NN);
+var mask=new Uint8Array(NN),bricks=[];
+var BW=22,BH=12,J=2;
+for(var row=0,y0=4;y0+BH<=N-4;row++,y0+=BH){
+  var off=(row%2)?-(BW>>1):0;
+  for(var x0=4+off;x0<N-4;x0+=BW){
+    var bx0=Math.max(4,x0+J),by0=y0+J,bx1=Math.min(N-4,x0+BW-J),by1=y0+BH-J;
+    if(bx1-bx0<4)continue;
+    var cells=[];
+    for(var yy=by0;yy<by1;yy++)for(var xx=bx0;xx<bx1;xx++){mask[yy*N+xx]=1;cells.push(yy*N+xx);}
+    bricks.push({x0:bx0,y0:by0,x1:bx1,y1:by1,cells:cells});
+  }
+}
+var f=0.055,k=0.062,Da=1.0,Db=0.5;
+function reset(){A.fill(1);B.fill(0);}
+function seedBrick(br){
+  var sx=br.x0+((Math.random()*Math.max(1,br.x1-br.x0-4))|0),sy=br.y0+((Math.random()*Math.max(1,br.y1-br.y0-4))|0);
+  for(var y=sy;y<Math.min(sy+4,br.y1);y++)for(var x=sx;x<Math.min(sx+4,br.x1);x++){B[y*N+x]=1;A[y*N+x]=0;}
+}
+function seedAt(gx,gy){
+  for(var y=gy-1;y<=gy+1;y++)for(var x=gx-1;x<=gx+1;x++){
+    if(x>0&&y>0&&x<N-1&&y<N-1&&mask[y*N+x]){B[y*N+x]=0.9;A[y*N+x]=0.1;}}
+}
+reset();
+for(var s=0;s<6;s++)seedBrick(bricks[(Math.random()*bricks.length)|0]);
+function step(){
+  for(var y=1;y<N-1;y++){
+    var yi=y*N;
+    for(var x=1;x<N-1;x++){
+      var i=yi+x;
+      if(!mask[i]){A2[i]=1;B2[i]=0;continue;}
+      var a=A[i],b=B[i];
+      var la=0.2*(A[i-1]+A[i+1]+A[i-N]+A[i+N])+0.05*(A[i-N-1]+A[i-N+1]+A[i+N-1]+A[i+N+1])-a;
+      var lb=0.2*(B[i-1]+B[i+1]+B[i-N]+B[i+N])+0.05*(B[i-N-1]+B[i-N+1]+B[i+N-1]+B[i+N+1])-b;
+      var abb=a*b*b;
+      A2[i]=a+(Da*la-abb+f*(1-a));
+      B2[i]=b+(Db*lb+abb-(k+f)*b);
+    }
+  }
+  var t=A;A=A2;A2=t;t=B;B=B2;B2=t;
+}
+var buf=document.createElement('canvas');buf.width=N;buf.height=N;
+var bctx=buf.getContext('2d'),img=bctx.createImageData(N,N),px=img.data;
+function render(){
+  var p=0;
+  for(var i=0;i<NN;i++,p+=4){
+    var b=B[i],rr=18,gg=33,bb=56;
+    if(!mask[i]){rr=45;gg=58;bb=78;}
+    else if(Math.abs(b-0.2)<0.02&&b>Bsnap[i]+0.0004){rr=215;gg=124;bb=99;}
+    else if(b>=0.26){rr=242;gg=240;bb=234;}
+    else if(b>=0.15){rr=134;gg=140;bb=147;}
+    px[p]=rr;px[p+1]=gg;px[p+2]=bb;px[p+3]=255;
+  }
+  bctx.putImageData(img,0,0);
+  ctx.imageSmoothingEnabled=false;
+  ctx.drawImage(buf,0,0,N,N,0,0,W,H);
+  ctx.fillStyle='rgba(242,240,234,0.4)';ctx.font='800 7px Archivo,sans-serif';
+  ctx.fillText('EFFLORESCENCE SURVEY — BAY 12',10,H-10);
+}
+function checkSaturation(){
+  for(var bi=0;bi<bricks.length;bi++){
+    var br=bricks[bi],cells=br.cells,hot=0;
+    for(var j=0;j<cells.length;j++)if(B[cells[j]]>0.3)hot++;
+    if(hot/cells.length>0.85){
+      for(j=0;j<cells.length;j++){A[cells[j]]=1;B[cells[j]]=0;}
+      seedBrick(br);
+    }
+  }
+}
+var running=false,rafId=0,frameN=0;
+function frame(){
+  if(!running)return;
+  Bsnap.set(B);
+  for(var i=0;i<6;i++)step();
+  if(++frameN%90===0)checkSaturation();
+  render();
+  rafId=requestAnimationFrame(frame);
+}
+wrap.addEventListener('mousemove',function(e){
+  if(frameN%4)return;
+  var rc=wrap.getBoundingClientRect();
+  seedAt(((e.clientX-rc.left)/rc.width*N)|0,((e.clientY-rc.top)/rc.height*N)|0);
+});
+if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+  for(var i=0;i<2000;i++)step();
+  Bsnap.set(B);render();
+}else{
+  new IntersectionObserver(function(es){
+    var vis=es[0].isIntersecting;
+    if(vis&&!running){running=true;rafId=requestAnimationFrame(frame);}
+    else if(!vis){running=false;cancelAnimationFrame(rafId);}
+  }).observe(wrap);
+}
+})()</script>
+</div>
+</div>
+<figcaption><span class="num">12</span><b>Stone Grain Reaction</b><i>generative</i></figcaption>
+</figure>
+<figure class="card" data-tags="svg sketch">
+<div class="tile" data-title="Boiling Ink Skyline" data-tags="svg sketch">
+<style>
+.t-turbulence-boiling-line{aspect-ratio:4/3;width:100%;overflow:hidden;position:relative;background:var(--cream);}
+.t-turbulence-boiling-line svg{position:absolute;inset:0;width:100%;height:100%;}
+.t-turbulence-boiling-line .ln{stroke:var(--ink);stroke-width:1.4;fill:none;stroke-linecap:round;stroke-linejoin:round;}
+.t-turbulence-boiling-line .hatch{stroke:var(--ink);stroke-width:.7;opacity:.45;fill:none;}
+.t-turbulence-boiling-line .tg{position:absolute;left:12px;bottom:10px;display:flex;align-items:center;gap:8px;cursor:pointer;background:none;border:0;padding:4px;font:inherit;}
+.t-turbulence-boiling-line .tg .pill{width:34px;height:18px;border-radius:9px;border:1.4px solid var(--ink);position:relative;transition:background .25s;}
+.t-turbulence-boiling-line .tg .pill i{position:absolute;top:2px;left:2px;width:11px;height:11px;border-radius:50%;background:var(--ink);transition:left .25s;}
+.t-turbulence-boiling-line .tg.on .pill{background:var(--coral);}
+.t-turbulence-boiling-line .tg.on .pill i{left:18px;background:var(--cream);}
+.t-turbulence-boiling-line .tg span{font-size:9px;font-weight:800;letter-spacing:.14em;color:var(--ink);}
+.t-turbulence-boiling-line .cap{position:absolute;top:10px;left:12px;font-size:9px;font-weight:800;letter-spacing:.18em;color:var(--ink);opacity:.55;}
+</style>
+<div class="t-turbulence-boiling-line">
+<svg viewBox="0 0 440 330" aria-label="Etched skyline with boiling-line animation">
+<defs>
+<filter id="turbulence-boiling-line-f" x="-6%" y="-6%" width="112%" height="112%">
+<feTurbulence id="turbulence-boiling-line-t" type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="1" result="n"/>
+<feDisplacementMap id="turbulence-boiling-line-d" in="SourceGraphic" in2="n" scale="0" xChannelSelector="R" yChannelSelector="G"/>
+</filter>
+</defs>
+<g filter="url(#turbulence-boiling-line-f)">
+<circle cx="386" cy="64" r="22" fill="var(--coral)"/>
+<path class="ln" d="M18 292 H422"/>
+<path class="ln" d="M34 292 V138 H40 M32 138 H98 M96 138 V292 M34 146 H96 M40 152 H90"/>
+<path class="hatch" d="M46 168 H84 M46 184 H84 M46 200 H84 M46 216 H84 M46 232 H84 M46 248 H84 M46 264 H84"/>
+<path class="ln" d="M112 292 V96 M108 96 H176 M172 292 V96 M112 104 H172 M118 110 H166 M112 96 L118 84 H166 L172 96"/>
+<path class="hatch" d="M124 128 V276 M138 128 V276 M152 128 V276 M164 128 V276"/>
+<path class="ln" d="M190 292 V178 M186 178 H262 M258 292 V178 M190 186 H258"/>
+<path class="hatch" d="M200 200 H250 M200 214 H250 M200 228 H250 M200 242 H250 M200 256 H250 M200 270 H250"/>
+<path class="ln" d="M214 178 V158 M234 178 V158 M210 158 H238 M212 158 L216 132 H232 L236 158 M216 132 L224 122 L232 132 M224 122 V112"/>
+<path class="ln" d="M276 292 V64 M272 64 H336 M332 292 V64 M276 72 H332 M282 78 H326 M276 64 L272 54 H340 L336 64"/>
+<path class="hatch" d="M288 94 H322 M288 112 H322 M288 130 H322 M288 148 H322 M288 166 H322 M288 184 H322 M288 202 H322 M288 220 H322 M288 238 H322 M288 256 H322 M288 274 H322"/>
+<path class="ln" d="M292 54 V38 H316 V54 M292 44 H316"/>
+<path class="ln" d="M352 292 V206 M348 206 H414 M410 292 V206 M352 214 H410"/>
+<path class="hatch" d="M362 228 H402 M362 244 H402 M362 260 H402 M362 276 H402"/>
+<path class="ln" d="M366 206 V190 H396 V206 M366 196 H396 M372 190 V182 H390 V190"/>
+</g>
+</svg>
+<div class="cap">KNS · PLATE 13</div>
+<button class="tg" id="turbulence-boiling-line-tg" type="button" aria-pressed="true"><span>PLATE</span><span class="pill"><i></i></span><span>SKETCH</span></button>
+</div>
+<script>(function(){
+var root=document.currentScript.previousElementSibling;
+var turb=root.querySelector('#turbulence-boiling-line-t');
+var disp=root.querySelector('#turbulence-boiling-line-d');
+var tg=root.querySelector('#turbulence-boiling-line-tg');
+var rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var seeds=[1,7,13,29],si=0,on=true,running=false,timer=null;
+var scale=rm?0:3,target=rm?0:3;
+if(!rm){tg.classList.add('on');disp.setAttribute('scale','3');}
+function boil(){turb.setAttribute('seed',seeds[si=(si+1)%seeds.length]);}
+function start(){if(timer||rm)return;timer=setInterval(function(){if(running)boil();},130);}
+function stop(){if(timer){clearInterval(timer);timer=null;}}
+var tw=null;
+function tween(){
+if(tw)cancelAnimationFrame(tw);
+var from=scale,t0=performance.now(),dur=260;
+(function step(now){
+var p=Math.min(1,(now-t0)/dur);p=p<.5?2*p*p:1-Math.pow(-2*p+2,2)/2;
+scale=from+(target-from)*p;disp.setAttribute('scale',scale.toFixed(2));
+if(p<1)tw=requestAnimationFrame(step);else tw=null;
+})(t0);}
+tg.addEventListener('click',function(){
+on=!on;target=on?3:0;tg.classList.toggle('on',on);tg.setAttribute('aria-pressed',String(on));
+if(rm){disp.setAttribute('scale',on?'3':'0');return;}
+tween();});
+var io=new IntersectionObserver(function(es){running=es[0].isIntersecting;if(running)start();else stop();});
+io.observe(root);
+})()</script>
+</div>
+<figcaption><span class="num">13</span><b>Boiling Ink Skyline</b><i>svg sketch</i></figcaption>
+</figure>
+<figure class="card" data-tags="svg sketch scroll">
+<div class="tile" data-title="Plotter-Pen Elevation" data-tags="svg sketch scroll">
+<style>
+.t-dashed-plot-elevation{aspect-ratio:4/3;width:100%;overflow:hidden;position:relative;background:var(--navy2);}
+.t-dashed-plot-elevation svg{position:absolute;inset:0;width:100%;height:100%;}
+.t-dashed-plot-elevation path{vector-effect:non-scaling-stroke;fill:none;stroke-linecap:round;}
+.t-dashed-plot-elevation .grid{stroke:var(--cream);stroke-width:.5;opacity:.12;}
+.t-dashed-plot-elevation .cx{stroke:var(--cream);stroke-width:.7;stroke-dasharray:5 5;opacity:.35;}
+.t-dashed-plot-elevation .heavy{stroke:var(--cream);stroke-width:2;}
+.t-dashed-plot-elevation .mull{stroke:var(--cream);stroke-width:1;}
+.t-dashed-plot-elevation .dim{stroke:var(--coral);stroke-width:1;}
+.t-dashed-plot-elevation .arw{fill:var(--coral);stroke:none;}
+.t-dashed-plot-elevation text{fill:var(--coral);font-weight:800;font-size:10px;letter-spacing:.06em;}
+.t-dashed-plot-elevation .ttl{fill:var(--cream);opacity:.5;font-size:8px;letter-spacing:.2em;}
+</style>
+<div class="t-dashed-plot-elevation">
+<svg viewBox="0 0 440 330">
+<defs><clipPath id="dashed-plot-elevation-clip"><rect id="dashed-plot-elevation-cr" x="0" y="0" width="0" height="330"/></clipPath></defs>
+<g clip-path="url(#dashed-plot-elevation-clip)">
+<g id="dashed-plot-elevation-grid">
+<path class="grid" d="M55 0V330M110 0V330M165 0V330M220 0V330M275 0V330M330 0V330M385 0V330"/>
+<path class="grid" d="M0 55H440M0 110H440M0 165H440M0 220H440M0 275H440"/>
+<path class="cx" d="M70 20V310"/><path class="cx" d="M310 20V310"/>
+<path class="cx" d="M30 62H410"/><path class="cx" d="M30 268H410"/>
+</g></g>
+<path class="heavy" data-a="0.20" data-b="0.50" d="M90 268 V80 L100 80 V62 H280 V80 L290 80 V268 Z"/>
+<path class="heavy" data-a="0.34" data-b="0.52" d="M104 62 V52 H276 V62 M104 56 H276"/>
+<path class="mull" data-a="0.46" data-b="0.62" d="M112 100 H148 V150 H112 Z M166 100 H202 V150 H166 Z M220 100 H256 V150 H220 Z"/>
+<path class="mull" data-a="0.52" data-b="0.68" d="M112 170 H148 V220 H112 Z M166 170 H202 V220 H166 Z M220 170 H256 V220 H220 Z"/>
+<path class="mull" data-a="0.58" data-b="0.75" d="M130 100 V150 M112 125 H148 M184 100 V150 M166 125 H202 M238 100 V150 M220 125 H256 M130 170 V220 M112 195 H148 M184 170 V220 M166 195 H202 M238 170 V220 M220 195 H256"/>
+<path class="mull" data-a="0.62" data-b="0.78" d="M118 268 V236 H162 V268 M140 236 V268 M118 250 H162"/>
+<path class="dim" data-a="0.74" data-b="0.86" d="M90 288 H290 M90 282 V294 M290 282 V294"/>
+<path class="dim" data-a="0.78" data-b="0.90" d="M312 62 V268 M306 62 H318 M306 268 H318"/>
+<path class="arw" data-at="0.86" d="M90 288 l9 -3 v6 Z" data-ox="90" data-oy="288"/>
+<path class="arw" data-at="0.86" d="M290 288 l-9 -3 v6 Z" data-ox="290" data-oy="288"/>
+<path class="arw" data-at="0.90" d="M312 62 l-3 9 h6 Z" data-ox="312" data-oy="62"/>
+<path class="arw" data-at="0.90" d="M312 268 l-3 -9 h6 Z" data-ox="312" data-oy="268"/>
+<text data-at="0.92" x="190" y="281" text-anchor="middle">22'-6"</text>
+<text data-at="0.94" x="322" y="168" text-anchor="middle" transform="rotate(-90 322 168)">31'-0"</text>
+<text class="ttl" data-at="0.96" x="90" y="318">KNS RESTORATION · WEST ELEVATION · SHT A-201</text>
+</svg>
+</div>
+<script>(function(){
+var root=document.currentScript.previousElementSibling;
+var svg=root.querySelector('svg');
+var cr=svg.querySelector('#dashed-plot-elevation-cr');
+var draws=[].slice.call(svg.querySelectorAll('path[data-a]'));
+var pops=[].slice.call(svg.querySelectorAll('[data-at]'));
+draws.forEach(function(p){var L=p.getTotalLength()||1;p._L=L;p.style.strokeDasharray=L+' '+L;p.style.strokeDashoffset=L;});
+pops.forEach(function(el){
+if(el.tagName==='text'){el.style.opacity=0;}
+else{el.style.transformOrigin=el.dataset.ox+'px '+el.dataset.oy+'px';el.style.transform='scale(0)';}});
+function ez(t){return t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2;}
+function cl(v){return v<0?0:v>1?1:v;}
+function apply(p){
+cr.setAttribute('width',(440*cl(p/0.22)).toFixed(1));
+draws.forEach(function(el){
+var a=+el.dataset.a,b=+el.dataset.b,d=b-a||1;
+var lp=cl((p-a)/d);
+el.style.strokeDashoffset=(el._L*(1-lp)).toFixed(1);});
+pops.forEach(function(el){
+var s=ez(cl((p-(+el.dataset.at))/0.05));
+if(el.tagName==='text')el.style.opacity=s;
+else el.style.transform='scale('+s.toFixed(3)+')';});}
+if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){apply(1);return;}
+var ticking=false;
+function measure(){
+var r=root.getBoundingClientRect();
+var vh=window.innerHeight||document.documentElement.clientHeight||1;
+var span=vh*0.75+r.height;
+var p=span>0?cl((vh*0.9-r.top)/span):1;
+apply(p);}
+function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(function(){ticking=false;measure();});}}
+window.addEventListener('scroll',onScroll,{passive:true});
+window.addEventListener('resize',onScroll);
+measure();
+})()</script>
+</div>
+<figcaption><span class="num">14</span><b>Plotter-Pen Elevation</b><i>svg sketch scroll</i></figcaption>
+</figure>
+<figure class="card" data-tags="svg interactive">
+<div class="tile" data-title="Cornice Profile Morph" data-tags="svg interactive">
+<style>
+.t-cornice-morph{aspect-ratio:4/3;width:100%;overflow:hidden;position:relative;background:var(--navy);}
+.t-cornice-morph svg{position:absolute;inset:0;width:100%;height:100%;}
+.t-cornice-morph .datum{stroke:var(--cream);stroke-width:.6;opacity:.28;}
+.t-cornice-morph #cornice-morph-p{fill-opacity:.10;stroke-width:1.6;stroke-linejoin:round;transition:stroke .8s,fill .8s;}
+.t-cornice-morph .lbl{position:absolute;top:12px;left:14px;font-size:9px;font-weight:800;letter-spacing:.18em;color:var(--cream);transition:color .5s;}
+.t-cornice-morph .lbl.ex{color:var(--coral);}
+.t-cornice-morph .nm{position:absolute;top:26px;left:14px;font-size:11px;font-weight:800;color:var(--cream);opacity:.85;}
+.t-cornice-morph .dots{position:absolute;bottom:12px;left:0;right:0;display:flex;justify-content:center;gap:12px;}
+.t-cornice-morph .dots button{width:9px;height:9px;border-radius:50%;border:1.2px solid var(--cream);background:transparent;padding:0;cursor:pointer;opacity:.5;transition:all .3s;}
+.t-cornice-morph .dots button.cur{opacity:1;background:var(--cream);}
+.t-cornice-morph .dots button.er{border-color:var(--coral);}
+.t-cornice-morph .dots button.er.cur{background:var(--coral);}
+</style>
+<div class="t-cornice-morph">
+<svg viewBox="0 0 440 330">
+<path class="datum" d="M20 168 H420 M70 162 V174 M370 162 V174" fill="none"/>
+<path class="datum" d="M138 40 V300" fill="none"/>
+<path id="cornice-morph-p" d=""/>
+</svg>
+<div class="lbl" id="cornice-morph-lbl">PROPOSED</div>
+<div class="nm" id="cornice-morph-nm"></div>
+<div class="dots" id="cornice-morph-dots"></div>
+</div>
+<script>(function(){
+var root=document.currentScript.previousElementSibling;
+var path=root.querySelector('#cornice-morph-p');
+var lbl=root.querySelector('#cornice-morph-lbl');
+var nm=root.querySelector('#cornice-morph-nm');
+var dotsEl=root.querySelector('#cornice-morph-dots');
+var CREAM='#F2F0EA',CORAL='#D77C63';
+function bez(a,b,c,d,t){var u=1-t;return[u*u*u*a[0]+3*u*u*t*b[0]+3*u*t*t*c[0]+t*t*t*d[0],u*u*u*a[1]+3*u*u*t*b[1]+3*u*t*t*c[1]+t*t*t*d[1]];}
+function cyma(){var pts=[];for(var i=0;i<=24;i++)pts.push(bez([140,238],[220,238],[240,96],[318,96],i/24));return pts;}
+function ogee(){var pts=[],base=cyma(),i;
+for(i=0;i<=8;i++){var t=i/8,p=base[Math.round(t*6)];
+pts.push([p[0],p[1]]);
+if(i%2===1){pts.push([p[0],p[1]-14]);pts.push([p[0]+10,p[1]-14]);pts.push([p[0]+10,p[1]]);}}
+for(i=8;i<=24;i++)pts.push(base[i]);return pts;}
+function bracket(){return[[140,238],[196,238],[196,212],[186,206],[186,196],[224,196],[224,166],[214,160],[214,150],[258,150],[258,124],[248,118],[248,110],[292,110],[292,96],[318,96]];}
+function eroded(){var base=cyma(),j=[0,3,-5,2,-7,4,-3,8,-4,2,-9,5,-2,6,-5,3,-8,2,-4,7,-3,5,-2,3,0];
+return base.map(function(p,i){var k=j[i]||0;return[p[0]+k*0.6,p[1]+Math.abs(k)*0.9];});}
+function resample(pts,N){
+var d=[0],tot=0,i;
+for(i=1;i<pts.length;i++){tot+=Math.hypot(pts[i][0]-pts[i-1][0],pts[i][1]-pts[i-1][1]);d.push(tot);}
+if(tot<=0)return pts.slice(0,1).concat(Array(N-1).fill(pts[0]));
+var out=[],k=1;
+for(i=0;i<N;i++){var target=tot*i/(N-1);
+while(k<d.length-1&&d[k]<target)k++;
+var seg=d[k]-d[k-1]||1,t=(target-d[k-1])/seg;
+out.push([pts[k-1][0]+(pts[k][0]-pts[k-1][0])*t,pts[k-1][1]+(pts[k][1]-pts[k-1][1])*t]);}
+return out;}
+var N=72,cap=[[318,78],[140,78]];
+function bake(edge){return[[140,300]].concat(resample(edge,N)).concat(cap);}
+var states=[
+{name:'CYMA RECTA',pts:bake(cyma()),er:false},
+{name:'OGEE + DENTILS',pts:bake(ogee()),er:false},
+{name:'VICTORIAN BRACKET',pts:bake(bracket()),er:false},
+{name:'ERODED — EXISTING',pts:bake(eroded()),er:true}];
+function toD(pts){var s='M'+pts[0][0].toFixed(1)+' '+pts[0][1].toFixed(1);
+for(var i=1;i<pts.length;i++)s+='L'+pts[i][0].toFixed(1)+' '+pts[i][1].toFixed(1);return s+'Z';}
+var cur=0,curPts=states[0].pts.map(function(p){return p.slice();}),raf=null,visible=true;
+var rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var dots=states.map(function(s,i){
+var b=document.createElement('button');
+if(s.er)b.className='er';
+b.setAttribute('aria-label',s.name);
+b.addEventListener('click',function(){stopAuto();go(i);});
+dotsEl.appendChild(b);return b;});
+function paint(){path.setAttribute('d',toD(curPts));}
+function setChrome(i){
+var s=states[i];
+path.style.stroke=s.er?CORAL:CREAM;path.style.fill=s.er?CORAL:CREAM;
+lbl.textContent=s.er?'EXISTING CONDITION':'PROPOSED';
+lbl.classList.toggle('ex',s.er);
+nm.textContent=s.name;
+dots.forEach(function(d,k){d.classList.toggle('cur',k===i);});}
+function go(i){
+if(i===cur&&path.getAttribute('d'))return;
+cur=i;setChrome(i);
+var to=states[i].pts;
+if(rm){curPts=to.map(function(p){return p.slice();});paint();return;}
+if(raf)cancelAnimationFrame(raf);
+var from=curPts.map(function(p){return p.slice();}),t0=performance.now();
+(function step(now){
+var t=Math.min(1,(now-t0)/800);
+var e=t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2;
+for(var k=0;k<to.length;k++){
+curPts[k][0]=from[k][0]+(to[k][0]-from[k][0])*e;
+curPts[k][1]=from[k][1]+(to[k][1]-from[k][1])*e;}
+paint();
+if(t<1)raf=requestAnimationFrame(step);else raf=null;
+})(t0);}
+var auto=setInterval(function(){if(visible)go((cur+1)%states.length);},3000);
+function stopAuto(){if(auto){clearInterval(auto);auto=null;}}
+root.addEventListener('pointerdown',stopAuto);
+var io=new IntersectionObserver(function(es){visible=es[0].isIntersecting;});
+io.observe(root);
+setChrome(0);paint();
+if(rm){stopAuto();go(3);}
+})()</script>
+</div>
+<figcaption><span class="num">15</span><b>Cornice Profile Morph</b><i>svg interactive</i></figcaption>
+</figure>
+<figure class="card" data-tags="svg">
+<div class="tile" data-title="Marching Ants Scope Lines" data-tags="svg">
+<style>
+.t-marching-ants-scope{aspect-ratio:4/3;width:100%;overflow:hidden;position:relative;background:var(--navy);}
+.t-marching-ants-scope .sheet{position:absolute;inset:16px 16px 34px 16px;overflow:hidden;box-shadow:0 2px 14px rgba(0,0,0,.35);}
+.t-marching-ants-scope .sheet img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.85) contrast(1.02);}
+.t-marching-ants-scope svg{position:absolute;inset:0;width:100%;height:100%;}
+.t-marching-ants-scope .zone rect.ants{fill:transparent;stroke:var(--cream);stroke-width:1;opacity:.5;transition:stroke .3s,opacity .3s;}
+.t-marching-ants-scope .z1 rect.ants{stroke-dasharray:4 4;animation:marching-ants-scope-m 1.1s linear infinite;}
+.t-marching-ants-scope .z2 rect.ants{stroke-dasharray:6 3;animation:marching-ants-scope-m 1.5s linear infinite;}
+.t-marching-ants-scope .z3 rect.ants{stroke-dasharray:2 5;animation:marching-ants-scope-m 0.85s linear infinite;}
+.t-marching-ants-scope .zone.act rect.ants{stroke:var(--coral);stroke-width:2;opacity:1;}
+.t-marching-ants-scope .tag{opacity:0;transition:opacity .3s;}
+.t-marching-ants-scope .zone.act .tag{opacity:1;}
+.t-marching-ants-scope .tag rect{fill:var(--coral);}
+.t-marching-ants-scope .tag text{fill:var(--cream);font-size:9px;font-weight:800;letter-spacing:.08em;}
+.t-marching-ants-scope .cap{position:absolute;left:16px;bottom:10px;font-size:9px;font-weight:800;letter-spacing:.16em;color:var(--cream);opacity:.6;}
+.t-marching-ants-scope .cap b{color:var(--coral);opacity:1;}
+@keyframes marching-ants-scope-m{to{stroke-dashoffset:-40;}}
+@media (prefers-reduced-motion: reduce){
+.t-marching-ants-scope .zone rect.ants{animation:none;}}
+</style>
+<div class="t-marching-ants-scope">
+<div class="sheet"><img src="https://raw.githubusercontent.com/victoriahendzel/kns-motion-concepts/main/rooftop-etch.jpg" alt="Etched facade study"></div>
+<svg viewBox="0 0 440 330">
+<g class="zone z1" id="marching-ants-scope-z1">
+<rect class="ants" x="40" y="30" width="360" height="52"/>
+<g class="tag"><rect x="40" y="18" width="34" height="14" rx="1"/><text x="47" y="28.5">W-1</text></g>
+</g>
+<g class="zone z2" id="marching-ants-scope-z2">
+<rect class="ants" x="70" y="118" width="250" height="60"/>
+<g class="tag"><rect x="70" y="106" width="34" height="14" rx="1"/><text x="77" y="116.5">W-2</text></g>
+</g>
+<g class="zone z3" id="marching-ants-scope-z3">
+<rect class="ants" x="150" y="212" width="140" height="72"/>
+<g class="tag"><rect x="150" y="200" width="34" height="14" rx="1"/><text x="157" y="210.5">W-3</text></g>
+</g>
+</svg>
+<div class="cap" id="marching-ants-scope-cap">SCOPE REVIEW · <b>W-1 PARAPET</b></div>
+</div>
+<script>(function(){
+var root=document.currentScript.previousElementSibling;
+var zones=[
+{el:root.querySelector('#marching-ants-scope-z1'),name:'W-1 PARAPET'},
+{el:root.querySelector('#marching-ants-scope-z2'),name:'W-2 3RD-FLR LINTELS'},
+{el:root.querySelector('#marching-ants-scope-z3'),name:'W-3 STOOP'}];
+var cap=root.querySelector('#marching-ants-scope-cap');
+var cur=0,visible=true,hovering=false;
+function setActive(i){
+cur=i;
+zones.forEach(function(z,k){z.el.classList.toggle('act',k===i);});
+cap.innerHTML='SCOPE REVIEW · <b>'+zones[i].name+'</b>';}
+zones.forEach(function(z,i){
+z.el.style.cursor='pointer';
+z.el.addEventListener('pointerenter',function(){hovering=true;setActive(i);});
+z.el.addEventListener('pointerleave',function(){hovering=false;});
+z.el.addEventListener('click',function(){setActive(i);});});
+setActive(0);
+if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var timer=setInterval(function(){if(visible&&!hovering)setActive((cur+1)%zones.length);},2500);
+var io=new IntersectionObserver(function(es){visible=es[0].isIntersecting;});
+io.observe(root);
+})()</script>
+</div>
+<figcaption><span class="num">16</span><b>Marching Ants Scope Lines</b><i>svg</i></figcaption>
+</figure>
+<figure class="card" data-tags="svg scroll photo">
+<div class="tile" data-title="Arched Window Wipe" data-tags="svg scroll photo">
+  <div class="t-arch-mask-wipe">
+    <style>
+      .t-arch-mask-wipe{aspect-ratio:4/3;width:100%;overflow:hidden;position:relative;background:var(--navy2);}
+      .t-arch-mask-wipe .amw-scroll{position:absolute;inset:0;overflow-y:auto;scrollbar-width:none;}
+      .t-arch-mask-wipe .amw-scroll::-webkit-scrollbar{display:none;}
+      .t-arch-mask-wipe .amw-track{height:250%;}
+      .t-arch-mask-wipe .amw-scene{position:sticky;top:0;height:40%;overflow:hidden;}
+      .t-arch-mask-wipe .amw-base{position:absolute;inset:0;background:var(--navy2);display:flex;align-items:center;justify-content:center;}
+      .t-arch-mask-wipe .amw-base h3{color:var(--cream);font-weight:800;font-size:15px;letter-spacing:.32em;margin:0;opacity:.85;}
+      .t-arch-mask-wipe .amw-base img{position:absolute;left:0;right:0;bottom:0;width:100%;opacity:.14;filter:invert(1);pointer-events:none;}
+      .t-arch-mask-wipe .amw-photo{position:absolute;inset:0;}
+      .t-arch-mask-wipe .amw-photo img{width:100%;height:100%;object-fit:cover;display:block;}
+      .t-arch-mask-wipe .amw-over{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;}
+      .t-arch-mask-wipe .amw-hint{position:absolute;bottom:8px;left:0;right:0;text-align:center;color:var(--cream);opacity:.45;font-size:9px;letter-spacing:.3em;font-weight:800;}
+    </style>
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+      <defs>
+        <clipPath id="arch-mask-wipe-clip" clipPathUnits="objectBoundingBox">
+          <path id="arch-mask-wipe-path" d="M0.35,0.85 L0.35,0.45 A0.15,0.2 0 0 1 0.65,0.45 L0.65,0.85 Z"/>
+        </clipPath>
+      </defs>
+    </svg>
+    <div class="amw-scroll" id="arch-mask-wipe-scroll">
+      <div class="amw-track">
+        <div class="amw-scene">
+          <div class="amw-base">
+            <h3>II &mdash; THE FACADE</h3>
+            <img src="https://raw.githubusercontent.com/victoriahendzel/kns-motion-concepts/main/skyline-etch-wide.jpg" alt="">
+          </div>
+          <div class="amw-photo" id="arch-mask-wipe-photo" style="clip-path:url(#arch-mask-wipe-clip)">
+            <img src="https://raw.githubusercontent.com/victoriahendzel/kns-motion-concepts/main/dome-photo.jpg" alt="Limestone dome cupola">
+          </div>
+          <svg class="amw-over" id="arch-mask-wipe-over" viewBox="0 0 400 300" preserveAspectRatio="none">
+            <g id="arch-mask-wipe-og">
+              <path d="M140,255 L140,135 A60,60 0 0 1 260,135 L260,255 Z" fill="none" stroke="var(--cream)" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+              <path d="M195,68 L205,68 L202,86 L198,86 Z" fill="var(--coral)"/>
+            </g>
+          </svg>
+          <div class="amw-hint">SCROLL</div>
+        </div>
+      </div>
+    </div>
+    <script>(function(){
+      var root=document.getElementById('arch-mask-wipe-scroll');
+      var path=document.getElementById('arch-mask-wipe-path');
+      var og=document.getElementById('arch-mask-wipe-og');
+      var over=document.getElementById('arch-mask-wipe-over');
+      var photo=document.getElementById('arch-mask-wipe-photo');
+      var hint=root.querySelector('.amw-hint');
+      var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var svgClipOK=CSS.supports('clip-path','url(#a)');
+      function apply(p){
+        p=Math.min(1,Math.max(0,p||0));
+        var s=0.12+Math.pow(p,1.2)*3.1;
+        if(svgClipOK){
+          path.setAttribute('transform','translate(0.5,0.45) scale('+s.toFixed(4)+') translate(-0.5,-0.45)');
+        }else{
+          var half=Math.min(50,s*15), top=Math.max(0,45-s*20), bot=Math.max(0,15-s*5);
+          photo.style.clipPath='inset('+top+'% '+(50-half)+'% '+bot+'% '+(50-half)+'% round '+(half*2)+'% '+(half*2)+'% 0 0)';
+        }
+        var fade=Math.min(1,Math.max(0,1-(s-1.2)/0.8));
+        og.setAttribute('transform','translate(200,135) scale('+s.toFixed(4)+') translate(-200,-135)');
+        over.style.opacity=fade;
+        hint.style.opacity=(0.45*(1-p*4)>0?0.45*(1-p*4):0);
+      }
+      if(reduce){ apply(1); return; }
+      apply(0);
+      var interacted=false,t=0,visible=true,raf=null;
+      function max(){ var m=root.scrollHeight-root.clientHeight; return m>0?m:1; }
+      root.addEventListener('scroll',function(){ apply(root.scrollTop/max()); },{passive:true});
+      ['wheel','touchstart','pointerdown','keydown'].forEach(function(e){
+        root.addEventListener(e,function(){ interacted=true; },{passive:true});
+      });
+      function tick(){
+        raf=null;
+        if(!visible)return;
+        if(!interacted){ t+=0.016; root.scrollTop=(0.5-0.5*Math.cos(t*0.9))*max()*0.18; }
+        raf=requestAnimationFrame(tick);
+      }
+      var io=new IntersectionObserver(function(es){
+        visible=es[0].isIntersecting;
+        if(visible&&!raf)raf=requestAnimationFrame(tick);
+      });
+      io.observe(root);
+    })()</script>
+  </div>
+</div>
+<figcaption><span class="num">17</span><b>Arched Window Wipe</b><i>svg scroll photo</i></figcaption>
+</figure>
+<figure class="card" data-tags="css scroll">
+<div class="tile" data-title="Scroll-Raised Scaffold" data-tags="css scroll">
+  <div class="t-scroll-timeline-scaffold">
+    <style>
+      .t-scroll-timeline-scaffold{aspect-ratio:4/3;width:100%;overflow:hidden;position:relative;background:var(--cream);}
+      .t-scroll-timeline-scaffold .sts-scroll{position:absolute;inset:0;overflow-y:auto;scrollbar-width:none;}
+      .t-scroll-timeline-scaffold .sts-scroll::-webkit-scrollbar{display:none;}
+      .t-scroll-timeline-scaffold .sts-track{height:320%;}
+      .t-scroll-timeline-scaffold .sts-scene{position:sticky;top:0;height:31.25%;overflow:hidden;}
+      .t-scroll-timeline-scaffold .sts-bldg{position:absolute;left:26%;right:26%;bottom:0;height:72%;background:var(--navy);}
+      .t-scroll-timeline-scaffold .sts-bldg::before{content:"";position:absolute;top:-6px;left:-4%;right:-4%;height:6px;background:var(--navy2);}
+      .t-scroll-timeline-scaffold .sts-bldg::after{content:"";position:absolute;inset:12% 18% 6% 18%;
+        background:repeating-linear-gradient(to bottom,rgba(242,240,234,.14) 0 2px,transparent 2px 18%);}
+      .t-scroll-timeline-scaffold .sts-scaf{position:absolute;left:21%;right:21%;bottom:0;height:80%;
+        border-left:2px solid var(--cream);border-right:2px solid var(--cream);}
+      .t-scroll-timeline-scaffold .sts-scaf::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:2px;background:var(--cream);opacity:.7;}
+      .t-scroll-timeline-scaffold .sts-lvl{position:absolute;left:0;right:0;height:20%;border-top:2px solid var(--cream);
+        transform-origin:bottom center;
+        animation:sts-deck linear both;animation-timeline:scroll(nearest);}
+      .t-scroll-timeline-scaffold .sts-lvl:nth-child(1){bottom:0;animation-range:0% 20%;}
+      .t-scroll-timeline-scaffold .sts-lvl:nth-child(2){bottom:20%;animation-range:20% 40%;}
+      .t-scroll-timeline-scaffold .sts-lvl:nth-child(3){bottom:40%;animation-range:40% 60%;}
+      .t-scroll-timeline-scaffold .sts-lvl:nth-child(4){bottom:60%;animation-range:60% 80%;}
+      .t-scroll-timeline-scaffold .sts-lvl:nth-child(5){bottom:80%;animation-range:80% 100%;}
+      .t-scroll-timeline-scaffold .sts-x{position:absolute;inset:2px 0 0 0;opacity:.85;
+        background:linear-gradient(to top right,transparent calc(50% - 1px),var(--cream) 50%,transparent calc(50% + 1px)),
+                   linear-gradient(to bottom right,transparent calc(50% - 1px),var(--cream) 50%,transparent calc(50% + 1px));
+        animation:sts-brace linear both;animation-timeline:scroll(nearest);}
+      .t-scroll-timeline-scaffold .sts-lvl:nth-child(1) .sts-x{animation-range:6% 24%;}
+      .t-scroll-timeline-scaffold .sts-lvl:nth-child(2) .sts-x{animation-range:26% 44%;}
+      .t-scroll-timeline-scaffold .sts-lvl:nth-child(3) .sts-x{animation-range:46% 64%;}
+      .t-scroll-timeline-scaffold .sts-lvl:nth-child(4) .sts-x{animation-range:66% 84%;}
+      .t-scroll-timeline-scaffold .sts-lvl:nth-child(5) .sts-x{animation-range:86% 100%;}
+      .t-scroll-timeline-scaffold .sts-cage{position:absolute;right:-20px;bottom:calc(100% - 24px);width:15px;height:22px;
+        border:2px solid var(--coral);background:rgba(215,124,99,.28);
+        animation:sts-hoist linear both;animation-timeline:scroll(nearest);animation-range:0% 100%;}
+      .t-scroll-timeline-scaffold .sts-rail{position:absolute;right:7%;bottom:10%;top:12%;width:3px;background:rgba(18,33,56,.15);}
+      .t-scroll-timeline-scaffold .sts-fill{position:absolute;inset:0;background:var(--coral);transform-origin:bottom center;
+        animation:sts-standpipe linear both;animation-timeline:scroll(nearest);animation-range:0% 100%;}
+      .t-scroll-timeline-scaffold .sts-hint{position:absolute;bottom:7px;left:0;right:0;text-align:center;color:var(--navy);
+        font-size:9px;font-weight:800;letter-spacing:.32em;
+        animation:sts-pulse 1.7s ease-in-out infinite,sts-hide linear both;
+        animation-timeline:auto,scroll(nearest);animation-range:normal,0% 12%;}
+      .t-scroll-timeline-scaffold .sts-title{position:absolute;top:9px;left:12px;color:var(--navy);font-size:10px;font-weight:800;letter-spacing:.22em;opacity:.65;}
+      @keyframes sts-deck{from{opacity:0;transform:translateY(16px) scaleY(.35);}to{opacity:1;transform:none;}}
+      @keyframes sts-brace{from{opacity:0;transform:scaleX(0);}to{opacity:.85;transform:scaleX(1);}}
+      @keyframes sts-hoist{from{bottom:0;}to{bottom:calc(100% - 24px);}}
+      @keyframes sts-standpipe{from{transform:scaleY(0);}to{transform:scaleY(1);}}
+      @keyframes sts-pulse{0%,100%{opacity:.85;}50%{opacity:.3;}}
+      @keyframes sts-hide{from{opacity:1;}to{opacity:0;visibility:hidden;}}
+      @supports not (animation-timeline: scroll()) {
+        .t-scroll-timeline-scaffold .sts-lvl,.t-scroll-timeline-scaffold .sts-x,
+        .t-scroll-timeline-scaffold .sts-cage,.t-scroll-timeline-scaffold .sts-fill{animation:none;}
+        .t-scroll-timeline-scaffold .sts-hint{animation:sts-pulse 1.7s ease-in-out infinite;opacity:.35;}
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .t-scroll-timeline-scaffold .sts-lvl,.t-scroll-timeline-scaffold .sts-x,
+        .t-scroll-timeline-scaffold .sts-cage,.t-scroll-timeline-scaffold .sts-fill,
+        .t-scroll-timeline-scaffold .sts-hint{animation:none;}
+      }
+    </style>
+    <div class="sts-scroll">
+      <div class="sts-track">
+        <div class="sts-scene">
+          <div class="sts-title">SIDEWALK SHED &middot; PERMIT 4471</div>
+          <div class="sts-bldg"></div>
+          <div class="sts-scaf">
+            <div class="sts-lvl"><div class="sts-x"></div></div>
+            <div class="sts-lvl"><div class="sts-x"></div></div>
+            <div class="sts-lvl"><div class="sts-x"></div></div>
+            <div class="sts-lvl"><div class="sts-x"></div></div>
+            <div class="sts-lvl"><div class="sts-x"></div></div>
+            <div class="sts-cage"></div>
+          </div>
+          <div class="sts-rail"><div class="sts-fill"></div></div>
+          <div class="sts-hint">SCROLL TO RAISE</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<figcaption><span class="num">18</span><b>Scroll-Raised Scaffold</b><i>css scroll</i></figcaption>
+</figure>
+<figure class="card" data-tags="css">
+<div class="tile" data-title="Registered Dusk Over Rooftops" data-tags="css">
+  <div class="t-property-gradient-dusk">
+    <style>
+      @property --pgd-stop { syntax: "<percentage>"; inherits: true; initial-value: 85%; }
+      @property --pgd-mix  { syntax: "<percentage>"; inherits: true; initial-value: 8%; }
+      @property --pgd-lights { syntax: "<number>"; inherits: true; initial-value: 0; }
+      .t-property-gradient-dusk{aspect-ratio:4/3;width:100%;overflow:hidden;position:relative;background:var(--navy2);}
+      .t-property-gradient-dusk .pgd-sky{position:absolute;inset:0;
+        --pgd-stop:85%;--pgd-mix:8%;--pgd-lights:0;
+        animation:pgd-cycle 6s ease-in-out infinite alternate;
+        background:linear-gradient(to top,
+          color-mix(in oklab, var(--coral2) var(--pgd-mix), var(--navy)) 0%,
+          color-mix(in oklab, var(--coral) calc(var(--pgd-mix)*0.45), var(--navy2)) var(--pgd-stop),
+          var(--navy2) 100%);}
+      @keyframes pgd-cycle{
+        from{--pgd-stop:85%;--pgd-mix:8%;--pgd-lights:0;}
+        to{--pgd-stop:32%;--pgd-mix:78%;--pgd-lights:1;}}
+      .t-property-gradient-dusk .pgd-dusk{position:absolute;inset:0;opacity:0;transition:opacity 1s ease;
+        background:linear-gradient(to top,
+          color-mix(in oklab, var(--coral2) 82%, var(--navy)) 0%,
+          color-mix(in oklab, var(--coral) 40%, var(--navy2)) 30%,
+          var(--navy2) 100%);}
+      .t-property-gradient-dusk:hover .pgd-sky{animation-play-state:paused;}
+      .t-property-gradient-dusk:hover .pgd-dusk{opacity:1;}
+      .t-property-gradient-dusk .pgd-sil{position:absolute;left:0;right:0;bottom:0;height:42%;width:100%;display:block;}
+      .t-property-gradient-dusk .pgd-win{position:absolute;left:0;bottom:0;height:42%;width:100%;pointer-events:none;
+        opacity:var(--pgd-lights);transition:opacity 1s ease;}
+      .t-property-gradient-dusk:hover .pgd-win{opacity:1;}
+      .t-property-gradient-dusk .pgd-dot{position:absolute;top:0;left:0;width:2px;height:2px;background:transparent;border-radius:1px;
+        box-shadow:100px 32px var(--cream),116px 32px var(--cream),132px 32px var(--cream),148px 32px var(--cream),
+          100px 48px var(--cream),132px 48px var(--cream),148px 48px var(--cream),
+          100px 64px var(--cream),116px 64px var(--cream),148px 64px var(--cream),
+          22px 58px var(--cream),40px 58px var(--cream),22px 74px var(--cream),56px 74px var(--cream),
+          198px 74px var(--cream),216px 74px var(--cream),234px 88px var(--cream),
+          276px 52px var(--cream),292px 52px var(--cream),276px 68px var(--cream),308px 68px var(--cream),
+          344px 78px var(--cream),362px 78px var(--cream),344px 94px var(--cream);}
+      .t-property-gradient-dusk .pgd-cap{position:absolute;top:10px;left:12px;color:var(--cream);opacity:.7;
+        font-size:10px;font-weight:800;letter-spacing:.24em;}
+      @media (prefers-reduced-motion: reduce){
+        .t-property-gradient-dusk .pgd-sky{animation:none;--pgd-stop:32%;--pgd-mix:78%;--pgd-lights:1;}
+      }
+    </style>
+    <div class="pgd-sky"></div>
+    <div class="pgd-dusk"></div>
+    <svg class="pgd-sil" viewBox="0 0 400 120" preserveAspectRatio="none" aria-hidden="true">
+      <g fill="var(--navy2)">
+        <rect x="8" y="44" width="62" height="76"/>
+        <rect x="82" y="22" width="88" height="98"/>
+        <rect x="180" y="58" width="70" height="62"/>
+        <rect x="262" y="36" width="58" height="84"/>
+        <rect x="330" y="64" width="66" height="56"/>
+      </g>
+      <g fill="var(--cream)">
+        <rect x="6" y="42" width="66" height="2"/>
+        <rect x="79" y="20" width="94" height="2.4"/>
+        <rect x="177" y="56" width="76" height="2"/>
+        <rect x="259" y="34" width="64" height="2"/>
+        <rect x="327" y="62" width="72" height="2"/>
+        <rect x="194" y="47" width="2.4" height="10"/>
+        <rect x="219" y="47" width="2.4" height="10"/>
+        <path d="M193,34 L223,34 L208,25 Z"/>
+        <rect x="193" y="34" width="30" height="13" rx="2"/>
+        <rect x="296" y="24" width="1.8" height="10"/>
+      </g>
+    </svg>
+    <div class="pgd-win"><div class="pgd-dot"></div></div>
+    <div class="pgd-cap">DUSK CYCLE &mdash; HOLD TO SETTLE</div>
+    <script>(function(){ /* pure CSS @property tile; no JS needed */ })()</script>
+  </div>
+</div>
+<figcaption><span class="num">19</span><b>Registered Dusk Over Rooftops</b><i>css</i></figcaption>
+</figure>
+<figure class="card" data-tags="css interactive">
+<div class="tile" data-title="Survey Card 3D Flip" data-tags="css interactive">
+  <div class="t-flip-survey-card" id="flip-survey-card-root">
+    <style>
+      .t-flip-survey-card{aspect-ratio:4/3;width:100%;overflow:hidden;position:relative;background:var(--navy2);
+        display:flex;align-items:center;justify-content:center;}
+      .t-flip-survey-card .fsc-scene{perspective:1200px;width:74%;aspect-ratio:8/5;}
+      .t-flip-survey-card .fsc-card{position:relative;width:100%;height:100%;transform-style:preserve-3d;
+        transition:transform .9s cubic-bezier(0.4,0,0.2,1.4),box-shadow .9s ease;
+        box-shadow:0 4px 14px rgba(0,0,0,.35);
+        animation:fsc-idle 6s ease-in-out infinite;}
+      @keyframes fsc-idle{0%,100%{transform:rotateY(-7deg);}50%{transform:rotateY(7deg);}}
+      .t-flip-survey-card:hover .fsc-card,
+      .t-flip-survey-card.is-flipped .fsc-card{animation:none;
+        transform:translateY(-6px) rotateY(180deg);
+        box-shadow:0 18px 34px rgba(0,0,0,.5);}
+      .t-flip-survey-card .fsc-face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;
+        border-radius:6px;overflow:hidden;}
+      .t-flip-survey-card .fsc-front{background:var(--cream);color:var(--navy);padding:12px 14px;}
+      .t-flip-survey-card .fsc-front h4{margin:0;font-weight:800;font-size:13px;letter-spacing:.12em;}
+      .t-flip-survey-card .fsc-front p{margin:2px 0 0;font-size:9px;letter-spacing:.24em;color:var(--ink);opacity:.65;}
+      .t-flip-survey-card .fsc-tower{position:absolute;right:12px;bottom:8px;height:70%;}
+      .t-flip-survey-card .fsc-stamp{position:absolute;left:12px;bottom:12px;width:34px;height:34px;border:2px solid var(--coral);
+        border-radius:50%;display:flex;align-items:center;justify-content:center;transform:rotate(-12deg);
+        color:var(--coral);font-weight:800;font-size:9px;letter-spacing:.08em;opacity:.9;}
+      .t-flip-survey-card .fsc-back{background:var(--navy);color:var(--cream);transform:rotateY(180deg);padding:12px 14px;
+        background-image:
+          repeating-linear-gradient(0deg,rgba(242,240,234,.07) 0 1px,transparent 1px 16px),
+          repeating-linear-gradient(90deg,rgba(242,240,234,.07) 0 1px,transparent 1px 16px);}
+      .t-flip-survey-card .fsc-back h5{margin:0 0 8px;font-weight:800;font-size:10px;letter-spacing:.26em;color:var(--coral2);}
+      .t-flip-survey-card .fsc-row{display:flex;justify-content:space-between;align-items:baseline;
+        font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:10px;padding:5px 0;
+        border-bottom:1px solid rgba(242,240,234,.16);
+        opacity:0;transform:translateY(7px);transition:opacity .35s ease,transform .35s ease;}
+      .t-flip-survey-card .fsc-row b{font-weight:800;color:var(--cream);}
+      .t-flip-survey-card .fsc-row span{opacity:.7;letter-spacing:.06em;}
+      .t-flip-survey-card:hover .fsc-row,
+      .t-flip-survey-card.is-flipped .fsc-row{opacity:1;transform:none;}
+      .t-flip-survey-card:hover .fsc-row:nth-of-type(1),.t-flip-survey-card.is-flipped .fsc-row:nth-of-type(1){transition-delay:.48s;}
+      .t-flip-survey-card:hover .fsc-row:nth-of-type(2),.t-flip-survey-card.is-flipped .fsc-row:nth-of-type(2){transition-delay:.58s;}
+      .t-flip-survey-card:hover .fsc-row:nth-of-type(3),.t-flip-survey-card.is-flipped .fsc-row:nth-of-type(3){transition-delay:.68s;}
+      .t-flip-survey-card .fsc-tip{position:absolute;bottom:7px;left:0;right:0;text-align:center;color:var(--cream);
+        opacity:.4;font-size:9px;font-weight:800;letter-spacing:.3em;}
+      @media (prefers-reduced-motion: reduce){
+        .t-flip-survey-card .fsc-card{animation:none;transition:none;}
+        .t-flip-survey-card .fsc-row{transition:none;}
+      }
+    </style>
+    <div class="fsc-scene">
+      <div class="fsc-card">
+        <div class="fsc-face fsc-front">
+          <h4>HAVEMEYER WAREHOUSE</h4>
+          <p>BROOKLYN &middot; EST. 1911</p>
+          <svg class="fsc-tower" viewBox="0 0 60 100" aria-hidden="true">
+            <g fill="none" stroke="var(--navy)" stroke-width="2">
+              <path d="M30,6 L10,24 L50,24 Z" fill="none"/>
+              <rect x="12" y="24" width="36" height="30" rx="2"/>
+              <path d="M12,32 h36 M12,40 h36 M12,48 h36" stroke-width="1"/>
+              <path d="M16,54 L10,96 M44,54 L50,96 M30,54 L30,96"/>
+              <path d="M13,74 L47,74 M16,54 L44,74 M44,54 L16,74" stroke-width="1.2"/>
+            </g>
+          </svg>
+          <div class="fsc-stamp">KNS</div>
+        </div>
+        <div class="fsc-face fsc-back">
+          <h5>SURVEY SHEET &mdash; 24-081</h5>
+          <div class="fsc-row"><span>FISP CYCLE</span><b>9B</b></div>
+          <div class="fsc-row"><span>REPOINTED</span><b>1,240 LF</b></div>
+          <div class="fsc-row"><span>TERRACOTTA REPLACED</span><b>86 UNITS</b></div>
+        </div>
+      </div>
+    </div>
+    <div class="fsc-tip">HOVER / TAP TO FLIP</div>
+    <script>(function(){
+      var root=document.getElementById('flip-survey-card-root');
+      root.addEventListener('click',function(){ root.classList.toggle('is-flipped'); });
+    })()</script>
+  </div>
+</div>
+<figcaption><span class="num">20</span><b>Survey Card 3D Flip</b><i>css interactive</i></figcaption>
+</figure>
+<figure class="card" data-tags="css">
+<div class="tile" data-title="Radar Inspection Sweep" data-tags="css">
+<style>
+@property --kns-sweep21 { syntax:'<angle>'; inherits:true; initial-value:0deg; }
+.t-conic-inspection-sweep{aspect-ratio:4/3;width:100%;overflow:hidden;position:relative;background:radial-gradient(circle at 50% 46%,var(--ink) 0%,var(--navy2) 72%);display:flex;align-items:center;justify-content:center;--kns-sweep21:0deg;animation:kns21-sweep 4s linear infinite;}
+@keyframes kns21-sweep{to{--kns-sweep21:360deg;}}
+.t-conic-inspection-sweep .k21-dial{position:relative;width:236px;height:236px;border-radius:50%;background:radial-gradient(circle,var(--navy) 0 62%,var(--ink) 63% 100%);box-shadow:0 0 0 1px rgba(242,240,234,.28),0 0 0 10px var(--navy2),0 0 0 11px rgba(242,240,234,.16),0 14px 40px rgba(0,0,0,.5);}
+/* minor ticks every 15deg */
+.t-conic-inspection-sweep .k21-dial::before{content:'';position:absolute;inset:0;border-radius:50%;background:repeating-conic-gradient(from -0.4deg,rgba(242,240,234,.55) 0 .8deg,transparent .8deg 15deg);-webkit-mask:radial-gradient(closest-side,transparent 86%,#000 86.5% 95%,transparent 95.5%);mask:radial-gradient(closest-side,transparent 86%,#000 86.5% 95%,transparent 95.5%);}
+/* quadrant ticks, longer */
+.t-conic-inspection-sweep .k21-dial::after{content:'';position:absolute;inset:0;border-radius:50%;background:repeating-conic-gradient(from -0.7deg,var(--cream) 0 1.4deg,transparent 1.4deg 90deg);-webkit-mask:radial-gradient(closest-side,transparent 76%,#000 76.5% 95%,transparent 95.5%);mask:radial-gradient(closest-side,transparent 76%,#000 76.5% 95%,transparent 95.5%);}
+.t-conic-inspection-sweep .k21-wedge{position:absolute;inset:6px;border-radius:50%;background:conic-gradient(from calc(var(--kns-sweep21) - 78deg),rgba(215,124,99,0) 0deg,rgba(215,124,99,.06) 30deg,rgba(215,124,99,.34) 74deg,rgba(227,119,107,.75) 77.4deg,rgba(242,240,234,.95) 78deg,transparent 78.4deg);mix-blend-mode:screen;}
+.t-conic-inspection-sweep .k21-plan{position:absolute;inset:0;margin:auto;width:112px;height:112px;opacity:.55;}
+.t-conic-inspection-sweep .k21-ring2{position:absolute;inset:0;margin:auto;width:158px;height:158px;border-radius:50%;border:1px dashed rgba(242,240,234,.22);}
+.t-conic-inspection-sweep .k21-dot{position:absolute;left:50%;top:50%;width:6px;height:6px;margin:-3px;border-radius:50%;background:var(--coral2);opacity:0;transform:rotate(var(--a)) translateY(-79px);animation:kns21-dot 4s linear infinite var(--d);}
+.t-conic-inspection-sweep .k21-dot::after{content:'';position:absolute;inset:-3px;border-radius:50%;border:2px solid var(--coral2);opacity:0;animation:kns21-ping 4s linear infinite var(--d);}
+@keyframes kns21-dot{0%{opacity:1}14%{opacity:1}55%{opacity:.18}100%{opacity:.12}}
+@keyframes kns21-ping{0%{opacity:.9;transform:scale(.5)}16%{opacity:0;transform:scale(3.2)}100%{opacity:0;transform:scale(3.2)}}
+.t-conic-inspection-sweep .k21-num{position:absolute;left:50%;top:50%;width:0;height:0;transform:rotate(var(--a));font-size:9px;font-weight:800;letter-spacing:.08em;color:rgba(242,240,234,.6);}
+.t-conic-inspection-sweep .k21-num i{position:absolute;left:0;top:0;transform:translateY(-142px) translate(-50%,-50%) rotate(calc(var(--a) * -1));font-style:normal;}
+.t-conic-inspection-sweep .k21-cap{position:absolute;left:14px;bottom:11px;font-size:9px;font-weight:800;letter-spacing:.24em;color:var(--coral);text-transform:uppercase;}
+.t-conic-inspection-sweep .k21-cap b{display:block;color:rgba(242,240,234,.55);font-weight:800;letter-spacing:.18em;}
+@media (prefers-reduced-motion:reduce){
+  .t-conic-inspection-sweep{animation:none;--kns-sweep21:132deg;}
+  .t-conic-inspection-sweep .k21-dot,.t-conic-inspection-sweep .k21-dot::after{animation:none;}
+  .t-conic-inspection-sweep .k21-dot{opacity:.85;}
+}
+</style>
+<div class="t-conic-inspection-sweep" id="conic-inspection-sweep-root">
+  <div class="k21-dial">
+    <div class="k21-wedge"></div>
+    <div class="k21-ring2"></div>
+    <svg class="k21-plan" viewBox="0 0 100 100" aria-hidden="true">
+      <circle cx="50" cy="50" r="44" fill="none" stroke="var(--cream)" stroke-width="1.4"/>
+      <circle cx="50" cy="50" r="30" fill="none" stroke="var(--cream)" stroke-width="1"/>
+      <circle cx="50" cy="50" r="4" fill="none" stroke="var(--cream)" stroke-width="1"/>
+      <path d="M50 6v18M50 76v18M6 50h18M76 50h18M19 19l14 14M81 81L67 67M81 19L67 33M19 81l14-14" stroke="var(--cream)" stroke-width="1"/>
+    </svg>
+    <span class="k21-dot" style="--a:40deg;--d:.44s"></span>
+    <span class="k21-dot" style="--a:130deg;--d:1.44s"></span>
+    <span class="k21-dot" style="--a:220deg;--d:2.44s"></span>
+    <span class="k21-dot" style="--a:305deg;--d:3.39s"></span>
+    <span class="k21-num" style="--a:0deg"><i>0</i></span>
+    <span class="k21-num" style="--a:45deg"><i>45</i></span>
+    <span class="k21-num" style="--a:90deg"><i>90</i></span>
+    <span class="k21-num" style="--a:135deg"><i>135</i></span>
+    <span class="k21-num" style="--a:180deg"><i>180</i></span>
+    <span class="k21-num" style="--a:225deg"><i>225</i></span>
+    <span class="k21-num" style="--a:270deg"><i>270</i></span>
+    <span class="k21-num" style="--a:315deg"><i>315</i></span>
+  </div>
+  <div class="k21-cap">Drone Survey<b>4 spall returns</b></div>
+</div>
+<script>(function(){
+  /* pure CSS tile — pause the custom-property sweep offscreen to save cycles */
+  var root=document.getElementById('conic-inspection-sweep-root');
+  if(!('IntersectionObserver' in window))return;
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){root.style.animationPlayState=e.isIntersecting?'running':'paused';
+      root.querySelectorAll('.k21-dot').forEach(function(d){d.style.animationPlayState=e.isIntersecting?'running':'paused';});});
+  },{threshold:.05});
+  io.observe(root);
+})()</script>
+</div>
+<figcaption><span class="num">21</span><b>Radar Inspection Sweep</b><i>css</i></figcaption>
+</figure>
+<figure class="card" data-tags="css">
+<div class="tile" data-title="Roofline Clip Morph" data-tags="css">
+<style>
+.t-clip-morph-rooflines{aspect-ratio:4/3;width:100%;overflow:hidden;position:relative;background:linear-gradient(180deg,var(--navy2) 0%,var(--navy) 62%,var(--ink) 100%);}
+.t-clip-morph-rooflines .k22-stars{position:absolute;inset:0;background-image:radial-gradient(circle 1px at 12% 18%,var(--cream) 99%,transparent),radial-gradient(circle 1px at 78% 9%,var(--cream) 99%,transparent),radial-gradient(circle 1px at 51% 26%,var(--cream) 99%,transparent),radial-gradient(circle 1px at 31% 8%,var(--cream) 99%,transparent),radial-gradient(circle 1px at 90% 30%,var(--cream) 99%,transparent),radial-gradient(circle 1px at 65% 17%,var(--cream) 99%,transparent),radial-gradient(circle 1px at 22% 33%,var(--cream) 99%,transparent),radial-gradient(circle 1px at 42% 12%,var(--cream) 99%,transparent);background-size:100% 100%;opacity:.7;animation:kns22-twinkle 5s ease-in-out infinite alternate;}
+@keyframes kns22-twinkle{from{opacity:.45}to{opacity:.9}}
+.t-clip-morph-rooflines .k22-moon{position:absolute;right:14%;top:12%;width:26px;height:26px;border-radius:50%;border:1px solid rgba(242,240,234,.6);background:radial-gradient(circle at 38% 36%,rgba(242,240,234,.28),transparent 68%);}
+.t-clip-morph-rooflines .k22-masonry{position:absolute;inset:0;background:linear-gradient(180deg,var(--coral2) 0%,var(--coral) 46%,#b4614c 100%),var(--coral);background-blend-mode:normal;transition:clip-path 1s ease-in-out;}
+.t-clip-morph-rooflines .k22-masonry::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(13,26,46,.16) 0 1px,transparent 1px 11px),repeating-linear-gradient(90deg,rgba(13,26,46,.09) 0 1px,transparent 1px 24px),repeating-linear-gradient(90deg,transparent 0 12px,rgba(242,240,234,.05) 12px 13px,transparent 13px 24px);}
+.t-clip-morph-rooflines .k22-label{position:absolute;left:0;right:0;bottom:14px;text-align:center;color:var(--cream);font-size:11px;font-weight:800;letter-spacing:.28em;text-transform:uppercase;transition:opacity .4s ease;opacity:1;}
+.t-clip-morph-rooflines .k22-tag{position:absolute;left:14px;top:12px;color:rgba(242,240,234,.55);font-size:9px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;}
+@media (prefers-reduced-motion:reduce){.t-clip-morph-rooflines .k22-stars{animation:none;} .t-clip-morph-rooflines .k22-masonry{transition:none;}}
+</style>
+<div class="t-clip-morph-rooflines" id="clip-morph-rooflines-root">
+  <div class="k22-stars"></div>
+  <div class="k22-moon"></div>
+  <div class="k22-masonry" id="clip-morph-rooflines-mask"></div>
+  <span class="k22-tag">NYC Roofline Survey</span>
+  <div class="k22-label" id="clip-morph-rooflines-label">Flat Parapet</div>
+</div>
+<script>(function(){
+  var mask=document.getElementById('clip-morph-rooflines-mask');
+  var label=document.getElementById('clip-morph-rooflines-label');
+  var root=document.getElementById('clip-morph-rooflines-root');
+  /* four 24-point profiles — identical vertex count so clip-path interpolates natively */
+  var P=[
+    {n:'Flat Parapet + Chimney',p:[[0,100],[0,42],[42,42],[44,42],[44,30],[45,30],[45,27],[53,27],[53,30],[54,30],[54,42],[58,42],[62,42],[66,42],[70,42],[74,42],[78,42],[82,42],[86,42],[90,42],[94,42],[97,42],[100,42],[100,100]]},
+    {n:'Stepped Dutch Gable',p:[[0,100],[0,55],[10,55],[10,48],[20,48],[20,41],[30,41],[30,34],[40,34],[40,27],[46,27],[46,20],[54,20],[54,27],[60,27],[60,34],[70,34],[70,41],[80,41],[80,48],[90,48],[90,55],[100,55],[100,100]]},
+    {n:'Bracketed Cornice',p:[[0,100],[0,46],[4,46],[4,38],[16,38],[16,42],[24,42],[24,38],[36,38],[36,42],[44,42],[44,38],[56,38],[56,42],[64,42],[64,38],[76,38],[76,42],[84,42],[84,38],[96,38],[96,46],[100,46],[100,100]]},
+    {n:'Water Tower on Dunnage',p:[[0,100],[0,52],[40,52],[40,44],[36,44],[36,41],[38,41],[38,26],[50,16],[62,26],[62,41],[64,41],[64,44],[60,44],[60,52],[68,52],[74,52],[80,52],[85,52],[89,52],[93,52],[96,52],[100,52],[100,100]]}
+  ];
+  function poly(i){return 'polygon('+P[i].p.map(function(pt){return pt[0]+'% '+pt[1]+'%';}).join(',')+')';}
+  var i=0,hover=false,timer=null;
+  var rm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function apply(idx){
+    mask.style.clipPath=poly(idx);
+    label.style.opacity=0;
+    setTimeout(function(){label.textContent=P[idx].n;label.style.opacity=1;},rm?0:420);
+  }
+  mask.style.clipPath=poly(0);label.textContent=P[0].n;
+  if(rm){i=3;mask.style.clipPath=poly(3);label.textContent=P[3].n;return;}
+  root.addEventListener('mouseenter',function(){hover=true;});
+  root.addEventListener('mouseleave',function(){hover=false;});
+  function tick(){if(!hover){i=(i+1)%P.length;apply(i);}}
+  function setRunning(on){
+    if(on&&!timer){timer=setInterval(tick,3500);}
+    else if(!on&&timer){clearInterval(timer);timer=null;}
+  }
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){setRunning(e.isIntersecting);});},{threshold:.05});
+    io.observe(root);
+  } else { setRunning(true); }
+})()</script>
+</div>
+<figcaption><span class="num">22</span><b>Roofline Clip Morph</b><i>css</i></figcaption>
+</figure>
+<figure class="card" data-tags="type">
+<div class="tile" data-title="Letterpress Line Reveal" data-tags="type">
+<style>
+.t-split-reveal-masthead{aspect-ratio:4/3;width:100%;overflow:hidden;position:relative;background:linear-gradient(160deg,var(--navy) 0%,var(--navy2) 100%);cursor:pointer;}
+.t-split-reveal-masthead .k23-band{position:absolute;left:-4%;right:-4%;top:30%;height:44%;background-image:url('https://raw.githubusercontent.com/victoriahendzel/kns-motion-concepts/main/skyline-etch-wide.jpg');background-size:cover;background-position:center;opacity:0;filter:grayscale(1) contrast(1.1);mix-blend-mode:screen;transform:translateY(14px);transition:transform 1.6s cubic-bezier(.19,1,.22,1),opacity 1.6s ease;}
+.t-split-reveal-masthead.k23-in .k23-band{opacity:.14;transform:translateY(0);animation:kns23-drift 9s ease-in-out 1.8s infinite alternate;}
+@keyframes kns23-drift{from{transform:translateY(0)}to{transform:translateY(-4px)}}
+.t-split-reveal-masthead .k23-stack{position:absolute;left:34px;top:50%;transform:translateY(-52%);}
+.t-split-reveal-masthead .k23-kick{display:block;overflow:hidden;margin-bottom:10px;}
+.t-split-reveal-masthead .k23-kick i{display:block;font-style:normal;font-size:9px;font-weight:800;letter-spacing:.34em;color:var(--coral);text-transform:uppercase;transform:translateY(120%);transition:transform .7s cubic-bezier(.19,1,.22,1);}
+.t-split-reveal-masthead .k23-mask{display:block;overflow:hidden;padding:0 2px;}
+.t-split-reveal-masthead .k23-line{display:block;font-family:Georgia,'Times New Roman',serif;font-weight:800;font-size:44px;line-height:1.06;letter-spacing:.01em;color:var(--cream);transform:translateY(110%);transition:transform .9s cubic-bezier(.19,1,.22,1);will-change:transform;}
+.t-split-reveal-masthead .k23-line em{font-style:italic;color:var(--coral2);letter-spacing:.02em;}
+.t-split-reveal-masthead.k23-in .k23-line,.t-split-reveal-masthead.k23-in .k23-kick i{transform:translateY(0);}
+.t-split-reveal-masthead.k23-out .k23-line,.t-split-reveal-masthead.k23-out .k23-kick i{transform:translateY(112%);transition:transform .38s cubic-bezier(.5,0,.75,0);}
+.t-split-reveal-masthead .k23-rule{display:block;margin-top:14px;width:180px;height:1px;background:var(--cream);opacity:.85;transform:scaleX(0);transform-origin:left center;transition:transform .8s cubic-bezier(.19,1,.22,1);}
+.t-split-reveal-masthead.k23-in .k23-rule{transform:scaleX(1);}
+.t-split-reveal-masthead.k23-out .k23-rule{transform:scaleX(0);transition:transform .3s ease-in;}
+.t-split-reveal-masthead .k23-hint{position:absolute;right:14px;bottom:11px;font-size:9px;font-weight:800;letter-spacing:.22em;color:rgba(242,240,234,.4);text-transform:uppercase;}
+@media (prefers-reduced-motion:reduce){
+  .t-split-reveal-masthead .k23-line,.t-split-reveal-masthead .k23-kick i,.t-split-reveal-masthead .k23-rule{transform:none !important;transition:none !important;}
+  .t-split-reveal-masthead .k23-band{opacity:.14;transform:none;transition:none;animation:none !important;}
+}
+</style>
+<div class="t-split-reveal-masthead" id="split-reveal-masthead-root">
+  <div class="k23-band"></div>
+  <div class="k23-stack">
+    <span class="k23-kick"><i>KNS Restoration — Est. 1987</i></span>
+    <span class="k23-mask"><span class="k23-line" style="--i:0">RESTORING</span></span>
+    <span class="k23-mask"><span class="k23-line" style="--i:1">NEW YORK&rsquo;S</span></span>
+    <span class="k23-mask"><span class="k23-line" style="--i:2"><em>FACADES</em></span></span>
+    <span class="k23-rule"></span>
+  </div>
+  <div class="k23-hint">Click to replay</div>
+</div>
+<script>(function(){
+  var root=document.getElementById('split-reveal-masthead-root');
+  var lines=root.querySelectorAll('.k23-line');
+  var kick=root.querySelector('.k23-kick i');
+  var rule=root.querySelector('.k23-rule');
+  var rm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var busy=false;
+  function setDelays(entering){
+    var n=lines.length;
+    lines.forEach(function(l,i){
+      l.style.transitionDelay=entering?(80*i)+'ms':(40*(n-1-i))+'ms';
+    });
+    kick.style.transitionDelay=entering?'0ms':(40*n)+'ms';
+    rule.style.transitionDelay=entering?(80*n+120)+'ms':'0ms';
+  }
+  function reveal(){
+    setDelays(true);
+    root.classList.remove('k23-out');
+    root.classList.add('k23-in');
+    setTimeout(function(){busy=false;},1400);
+  }
+  function replay(){
+    if(busy||rm)return;
+    busy=true;
+    setDelays(false);
+    root.classList.remove('k23-in');
+    root.classList.add('k23-out');
+    setTimeout(reveal,620);
+  }
+  root.addEventListener('click',replay);
+  if(rm){root.classList.add('k23-in');return;}
+  var start=function(){
+    if('IntersectionObserver' in window){
+      var io=new IntersectionObserver(function(es){
+        es.forEach(function(e){
+          if(e.isIntersecting){reveal();io.disconnect();}
+        });
+      },{threshold:.35});
+      io.observe(root);
+    } else { reveal(); }
+  };
+  /* wait for webfonts so line masks are measured post-FOUT */
+  if(document.fonts&&document.fonts.ready){document.fonts.ready.then(start,start);}
+  else{start();}
+})()</script>
+</div>
+<figcaption><span class="num">23</span><b>Letterpress Line Reveal</b><i>type</i></figcaption>
+</figure>
+<figure class="card" data-tags="type scroll">
+<div class="tile" data-title="Repointing Odometer" data-tags="type scroll">
+<style>
+.t-odometer-lf-counter{aspect-ratio:4/3;width:100%;overflow:hidden;position:relative;background:linear-gradient(170deg,var(--navy) 0%,var(--navy2) 100%);display:flex;flex-direction:column;justify-content:center;gap:13px;padding:26px 30px;box-sizing:border-box;cursor:pointer;}
+.t-odometer-lf-counter .k24-head{font-size:9px;font-weight:800;letter-spacing:.3em;color:rgba(242,240,234,.45);text-transform:uppercase;margin-bottom:2px;}
+.t-odometer-lf-counter .k24-row{display:flex;align-items:center;gap:12px;}
+.t-odometer-lf-counter .k24-digits{display:flex;gap:3px;align-items:center;}
+.t-odometer-lf-counter .k24-slot{width:20px;height:30px;overflow:hidden;background:linear-gradient(180deg,#0a1524 0%,var(--ink) 18%,var(--ink) 82%,#0a1524 100%);border:1px solid rgba(242,240,234,.14);border-radius:3px;box-shadow:inset 0 2px 3px rgba(0,0,0,.55),inset 0 -2px 3px rgba(0,0,0,.45);position:relative;}
+.t-odometer-lf-counter .k24-strip{display:block;will-change:transform;}
+.t-odometer-lf-counter .k24-strip i{display:flex;align-items:center;justify-content:center;width:20px;height:30px;font-style:normal;font-family:ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace;font-weight:800;font-size:15px;color:var(--cream);}
+.t-odometer-lf-counter .k24-comma{color:rgba(242,240,234,.6);font-family:ui-monospace,Menlo,Consolas,monospace;font-weight:800;font-size:15px;align-self:flex-end;padding-bottom:3px;}
+.t-odometer-lf-counter .k24-label{font-size:10px;font-weight:800;letter-spacing:.22em;color:var(--coral);text-transform:uppercase;white-space:nowrap;}
+.t-odometer-lf-counter .k24-ruler{display:flex;align-items:flex-end;gap:0;height:12px;margin-top:6px;border-bottom:1px solid rgba(242,240,234,.3);}
+.t-odometer-lf-counter .k24-ruler i{flex:1;height:6px;border-left:1px solid rgba(242,240,234,.55);transform:scaleY(0);transform-origin:bottom;transition:transform .28s ease;}
+.t-odometer-lf-counter .k24-ruler i.k24-maj{height:11px;border-left-color:var(--coral2);}
+.t-odometer-lf-counter.k24-done .k24-ruler i{transform:scaleY(1);}
+@media (prefers-reduced-motion:reduce){.t-odometer-lf-counter .k24-ruler i{transition:none;}}
+</style>
+<div class="t-odometer-lf-counter" id="odometer-lf-counter-root">
+  <div class="k24-head">Site Tally &mdash; 2026 Season</div>
+  <div id="odometer-lf-counter-rows"></div>
+  <div class="k24-ruler" id="odometer-lf-counter-ruler"></div>
+</div>
+<script>(function(){
+  var root=document.getElementById('odometer-lf-counter-root');
+  var rowsEl=document.getElementById('odometer-lf-counter-rows');
+  var ruler=document.getElementById('odometer-lf-counter-ruler');
+  var DH=30,SETS=7,rm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var DATA=[['48,500','LF Repointed'],['214','Facades Filed'],['32','Water Towers Restored']];
+  var cols=[];
+  DATA.forEach(function(d){
+    var row=document.createElement('div');row.className='k24-row';
+    var dg=document.createElement('div');dg.className='k24-digits';
+    var chars=d[0].split(''),nd=chars.filter(function(c){return c!==',';}).length,di=0;
+    chars.forEach(function(c){
+      if(c===','){var cm=document.createElement('span');cm.className='k24-comma';cm.textContent=',';dg.appendChild(cm);return;}
+      var slot=document.createElement('span');slot.className='k24-slot';
+      var strip=document.createElement('span');strip.className='k24-strip';
+      var h='';for(var s=0;s<SETS;s++)for(var g=0;g<10;g++)h+='<i>'+g+'</i>';
+      strip.innerHTML=h;slot.appendChild(strip);dg.appendChild(slot);
+      cols.push({strip:strip,digit:+c,pos:di,n:nd});di++;
+    });
+    var lb=document.createElement('span');lb.className='k24-label';lb.textContent=d[1];
+    row.appendChild(dg);row.appendChild(lb);rowsEl.appendChild(row);
+    row.style.marginBottom='12px';
+  });
+  for(var i=0;i<44;i++){var t=document.createElement('i');if(i%5===0)t.className='k24-maj';t.style.transitionDelay=(i*18)+'ms';ruler.appendChild(t);}
+  function setFinal(){cols.forEach(function(c){c.strip.style.transform='translateY(-'+(c.digit*DH)+'px)';});root.classList.add('k24-done');}
+  var playing=false,raf=0;
+  function play(){
+    if(playing)return;playing=true;
+    root.classList.remove('k24-done');void root.offsetWidth;
+    cols.forEach(function(c){
+      var rightness=c.pos; /* 0 = leftmost */
+      var revs=1+rightness+Math.floor(Math.random()*2); /* rightmost spins most */
+      c.final=Math.min(revs,SETS-2)*10+c.digit;
+      c.dur=1600-120*rightness; /* leftmost settles last */
+      c.delay=60*(c.n-1-rightness);
+      c.strip.style.transform='translateY(0)';
+    });
+    var t0=performance.now();
+    function frame(now){
+      var alive=false;
+      cols.forEach(function(c){
+        var t=(now-t0-c.delay)/c.dur;
+        if(t<0)t=0;if(t<1)alive=true;if(t>1)t=1;
+        var e=1-Math.pow(1-t,3);
+        c.strip.style.transform='translateY(-'+(e*c.final*DH).toFixed(1)+'px)';
+        if(t===1)c.strip.style.transform='translateY(-'+(c.digit*DH)+'px)';
+      });
+      if(alive){raf=requestAnimationFrame(frame);}
+      else{root.classList.add('k24-done');playing=false;}
+    }
+    raf=requestAnimationFrame(frame);
+  }
+  if(rm){setFinal();return;}
+  var seen=false;
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting&&!seen){seen=true;play();}
+      if(!e.isIntersecting&&raf){cancelAnimationFrame(raf);playing=false;setFinal();}
+    });},{threshold:.3});
+    io.observe(root);
+  } else { play(); }
+  root.addEventListener('click',function(){if(!playing)play();});
+})()</script>
+</div>
+<figcaption><span class="num">24</span><b>Repointing Odometer</b><i>type scroll</i></figcaption>
+</figure>
+<figure class="card" data-tags="type svg">
+<div class="tile" data-title="Type Along the Parapet" data-tags="type svg">
+<style>
+.t-text-on-scaffold-path{aspect-ratio:4/3;width:100%;overflow:hidden;position:relative;background:var(--navy);cursor:ew-resize}
+.t-text-on-scaffold-path svg{display:block;width:100%;height:100%}
+.t-text-on-scaffold-path .tsp-crawl{font-weight:800;font-size:12.5px;letter-spacing:3.5px;fill:var(--cream)}
+.t-text-on-scaffold-path .tsp-edge{fill:none;stroke:var(--coral);stroke-width:1.5;stroke-dasharray:4 5;opacity:.9;transition:opacity .9s ease}
+.t-text-on-scaffold-path .tsp-hint{position:absolute;left:14px;bottom:10px;font-size:9px;letter-spacing:2px;color:var(--cream);opacity:.35;font-weight:800}
+</style>
+<div class="t-text-on-scaffold-path" id="text-on-scaffold-path-root">
+  <svg viewBox="0 0 440 330" preserveAspectRatio="xMidYMid slice" aria-label="Type crawling along a skyline parapet">
+    <defs>
+      <pattern id="text-on-scaffold-path-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+        <line x1="0" y1="0" x2="0" y2="6" stroke="#F2F0EA" stroke-width=".55" opacity=".12"/>
+      </pattern>
+    </defs>
+    <rect x="0" y="0" width="440" height="330" fill="var(--navy)"/>
+    <polygon id="text-on-scaffold-path-sil" fill="var(--ink)"/>
+    <polygon id="text-on-scaffold-path-sil2" fill="url(#text-on-scaffold-path-hatch)"/>
+    <path id="text-on-scaffold-path-p" fill="none" stroke="none"/>
+    <use href="#text-on-scaffold-path-p" class="tsp-edge" id="text-on-scaffold-path-flash"/>
+    <text class="tsp-crawl"><textPath id="text-on-scaffold-path-tp" href="#text-on-scaffold-path-p" startOffset="0"></textPath></text>
+  </svg>
+  <div class="tsp-hint">HOVER TO REVERSE</div>
+</div>
+<script>(function(){
+  var root=document.getElementById('text-on-scaffold-path-root');
+  var pts=[[-12,192],[40,192],[40,166],[92,166],[92,178],[140,178],[140,148],[152,136],[164,148],[164,158],[214,158],[214,132],[262,132],[262,150],[310,150],[310,124],[322,112],[334,124],[334,168],[386,168],[386,146],[430,146],[430,184],[452,184]];
+  function chamfer(pts,c){ // trim corners so type turns cleanly at each step
+    var d='M'+pts[0][0]+' '+pts[0][1];
+    for(var i=1;i<pts.length-1;i++){
+      var p=pts[i],a=pts[i-1],b=pts[i+1];
+      var d1=Math.hypot(p[0]-a[0],p[1]-a[1])||1,d2=Math.hypot(b[0]-p[0],b[1]-p[1])||1;
+      var t1=Math.min(c,d1/2)/d1,t2=Math.min(c,d2/2)/d2;
+      d+=' L'+(p[0]+(a[0]-p[0])*t1).toFixed(1)+' '+(p[1]+(a[1]-p[1])*t1).toFixed(1);
+      d+=' L'+(p[0]+(b[0]-p[0])*t2).toFixed(1)+' '+(p[1]+(b[1]-p[1])*t2).toFixed(1);
+    }
+    var e=pts[pts.length-1];
+    return d+' L'+e[0]+' '+e[1];
+  }
+  var path=document.getElementById('text-on-scaffold-path-p');
+  path.setAttribute('d',chamfer(pts,9));
+  var poly=pts.map(function(p){return p[0]+','+p[1];}).join(' ')+' 452,340 -12,340';
+  document.getElementById('text-on-scaffold-path-sil').setAttribute('points',poly);
+  document.getElementById('text-on-scaffold-path-sil2').setAttribute('points',poly);
+  var tp=document.getElementById('text-on-scaffold-path-tp');
+  var unitStr='LOCAL LAW 11 ⌂ FISP CYCLE 10 ⌂ FACADE INSPECTION ⌂ ';
+  tp.textContent=unitStr;
+  var unit=0;
+  try{unit=tp.parentNode.getComputedTextLength();}catch(e){unit=0;}
+  if(!unit||!isFinite(unit)||unit<=0)unit=420;
+  var pathLen=path.getTotalLength()||900;
+  var copies=Math.ceil(pathLen/unit)+2;
+  tp.textContent=new Array(copies+1).join(unitStr);
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var flash=document.getElementById('text-on-scaffold-path-flash');
+  if(reduce){flash.style.opacity='.35';tp.setAttribute('startOffset','-30');return;}
+  // draw-on flash of the parapet edge, then fade
+  flash.style.strokeDasharray=pathLen;
+  flash.style.strokeDashoffset=pathLen;
+  requestAnimationFrame(function(){
+    flash.style.transition='stroke-dashoffset 1.7s ease';
+    flash.style.strokeDashoffset='0';
+    setTimeout(function(){flash.style.opacity='0';},2000);
+  });
+  var off=0,vel=34,target=34,running=true,last=null;
+  root.addEventListener('mouseenter',function(){target=-34;});
+  root.addEventListener('mouseleave',function(){target=34;});
+  function tick(t){
+    if(!running){last=null;return;}
+    if(last==null)last=t;
+    var dt=Math.min((t-last)/1000,.05);last=t;
+    vel+=(target-vel)*Math.min(1,dt*3.2); // short inertia ease on reversal
+    off-=vel*dt;
+    while(off<=-unit)off+=unit;
+    while(off>0)off-=unit;
+    tp.setAttribute('startOffset',off.toFixed(2));
+    requestAnimationFrame(tick);
+  }
+  var io=new IntersectionObserver(function(en){
+    var vis=en[0].isIntersecting;
+    if(vis&&!running){running=true;requestAnimationFrame(tick);}
+    else if(!vis)running=false;
+  });
+  io.observe(root);
+  requestAnimationFrame(tick);
+})()</script>
+</div>
+<figcaption><span class="num">25</span><b>Type Along the Parapet</b><i>type svg</i></figcaption>
+</figure>
+<figure class="card" data-tags="type interactive">
+<div class="tile" data-title="Permit Stamp Decode" data-tags="type interactive">
+<style>
+.t-scramble-decode-permit{aspect-ratio:4/3;width:100%;overflow:hidden;position:relative;background:var(--navy);cursor:pointer;display:flex;align-items:center;justify-content:center}
+.t-scramble-decode-permit .sdp-plate{border:1px solid rgba(242,240,234,.28);outline:1px solid rgba(242,240,234,.12);outline-offset:4px;padding:26px 22px 20px;width:78%;text-align:center;position:relative}
+.t-scramble-decode-permit .sdp-eyebrow{font-size:8px;letter-spacing:3px;color:var(--cream);opacity:.45;font-weight:800;margin-bottom:14px}
+.t-scramble-decode-permit .sdp-head{font-weight:800;font-size:19px;letter-spacing:2px;color:var(--cream);line-height:1.5;min-height:58px}
+.t-scramble-decode-permit .sdp-head span{opacity:.5;display:inline-block;white-space:pre}
+.t-scramble-decode-permit .sdp-head span.on{opacity:1}
+.t-scramble-decode-permit .sdp-stamp{display:inline-block;position:relative}
+.t-scramble-decode-permit .sdp-stamp.hit span{color:var(--coral2)}
+.t-scramble-decode-permit .sdp-stamp.hit{animation:sdp-settle .5s cubic-bezier(.2,1.6,.4,1) both}
+.t-scramble-decode-permit .sdp-ring{position:absolute;inset:-7px -10px;border:1.5px solid var(--coral);border-radius:3px;opacity:0;transform:rotate(-2deg)}
+.t-scramble-decode-permit .sdp-stamp.hit .sdp-ring{animation:sdp-ring .6s ease-out both}
+.t-scramble-decode-permit .sdp-sub{margin-top:16px;font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:2px;color:var(--cream)}
+.t-scramble-decode-permit .sdp-sub span{opacity:.5;white-space:pre}
+.t-scramble-decode-permit .sdp-sub span.on{opacity:.85}
+.t-scramble-decode-permit .sdp-hint{position:absolute;bottom:9px;left:0;right:0;text-align:center;font-size:8px;letter-spacing:2.5px;color:var(--cream);opacity:.3;font-weight:800}
+@keyframes sdp-settle{0%{transform:scale(1.1)}100%{transform:scale(1)}}
+@keyframes sdp-ring{0%{opacity:.55}100%{opacity:.14}}
+</style>
+<div class="t-scramble-decode-permit" id="scramble-decode-permit-root">
+  <div class="sdp-plate">
+    <div class="sdp-eyebrow">NYC DEPT. OF BUILDINGS · WORK PERMIT</div>
+    <div class="sdp-head" id="scramble-decode-permit-head"></div>
+    <div class="sdp-sub" id="scramble-decode-permit-sub"></div>
+  </div>
+  <div class="sdp-hint">CLICK TO RE-DECODE</div>
+</div>
+<script>(function(){
+  var root=document.getElementById('scramble-decode-permit-root');
+  var headEl=document.getElementById('scramble-decode-permit-head');
+  var subEl=document.getElementById('scramble-decode-permit-sub');
+  var CH='/|-+0123456789';
+  var words=['PERMIT ','APPROVED',' — FACADE RESTORATION'];
+  var subTxt='BIN 1088347 / BLOCK 852 / LOT 12';
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var glyphs=[],stampWrap;
+  function mk(txt,parent){var out=[],word=null;
+    for(var i=0;i<txt.length;i++){var c=txt[i],host;
+      if(c===' '){host=parent;word=null;}
+      else{if(!word){word=document.createElement('span');word.style.whiteSpace='nowrap';parent.appendChild(word);}host=word;}
+      var s=document.createElement('span');s.textContent=c;host.appendChild(s);
+      out.push({el:s,ch:c,lock:0,locked:false,next:0});}
+    return out;}
+  headEl.innerHTML='';subEl.innerHTML='';
+  glyphs=mk(words[0],headEl);
+  stampWrap=document.createElement('span');stampWrap.className='sdp-stamp';headEl.appendChild(stampWrap);
+  var stampGlyphs=mk(words[1],stampWrap);
+  var ring=document.createElement('i');ring.className='sdp-ring';stampWrap.appendChild(ring);
+  var tail=mk(words[2],headEl);
+  var subGlyphs=mk(subTxt,subEl);
+  var seq=glyphs.concat(tail); // locks left-to-right; APPROVED stamps last
+  var running=false,start=0,raf=0,visible=true;
+  function schedule(){
+    var n=Math.max(1,seq.length-1);
+    seq.forEach(function(g,i){g.lock=120+(i/n)*1400;g.locked=false;g.next=0;g.el.classList.remove('on');});
+    stampGlyphs.forEach(function(g){g.lock=1850;g.locked=false;g.next=0;g.el.classList.remove('on');});
+    var m=Math.max(1,subGlyphs.length-1);
+    subGlyphs.forEach(function(g,i){g.lock=600+300+(i/m)*900;g.locked=false;g.next=0;g.el.classList.remove('on');});
+    stampWrap.classList.remove('hit');
+  }
+  function finish(){seq.concat(stampGlyphs,subGlyphs).forEach(function(g){g.el.textContent=g.ch;g.el.classList.add('on');});stampWrap.classList.add('hit');}
+  function step(t){
+    if(!running)return;
+    var el=t-start,done=true;
+    var all=seq.concat(stampGlyphs,subGlyphs);
+    for(var i=0;i<all.length;i++){var g=all[i];
+      if(g.locked)continue;
+      if(el>=g.lock){g.locked=true;g.el.textContent=g.ch;g.el.classList.add('on');
+        if(g===stampGlyphs[stampGlyphs.length-1])stampWrap.classList.add('hit');
+      }else{done=false;
+        if(g.ch!==' '&&el>=g.next){g.next=el+30;g.el.textContent=CH[(Math.random()*CH.length)|0];}
+      }
+    }
+    if(done){running=false;return;}
+    raf=requestAnimationFrame(step);
+  }
+  function play(){
+    cancelAnimationFrame(raf);schedule();
+    if(reduce||!visible){finish();running=false;return;}
+    running=true;start=performance.now();raf=requestAnimationFrame(step);
+  }
+  root.addEventListener('click',play);
+  var io=new IntersectionObserver(function(en){
+    visible=en[0].isIntersecting;
+    if(!visible&&running){running=false;cancelAnimationFrame(raf);finish();}
+  });
+  io.observe(root);
+  play();
+})()</script>
+</div>
+<figcaption><span class="num">26</span><b>Permit Stamp Decode</b><i>type interactive</i></figcaption>
+</figure>
+<figure class="card" data-tags="type sketch svg">
+<div class="tile" data-title="Hand-Inked Underlines" data-tags="type sketch svg">
+<style>
+.t-draw-on-underline-services{aspect-ratio:4/3;width:100%;overflow:hidden;position:relative;background:var(--cream);display:flex;flex-direction:column;justify-content:center;padding:0 34px;box-sizing:border-box}
+.t-draw-on-underline-services .dus-kicker{font-size:8px;letter-spacing:3px;font-weight:800;color:var(--coral);margin-bottom:14px}
+.t-draw-on-underline-services .dus-item{display:flex;align-items:baseline;gap:14px;padding:9px 0;cursor:pointer}
+.t-draw-on-underline-services .dus-num{font-weight:800;font-size:11px;letter-spacing:1px;color:transparent;-webkit-text-stroke:1px var(--coral);transition:color .3s ease;min-width:20px}
+.t-draw-on-underline-services .dus-item.on .dus-num{color:var(--coral)}
+.t-draw-on-underline-services .dus-label{position:relative;font-weight:800;font-size:16.5px;letter-spacing:.5px;color:var(--navy)}
+.t-draw-on-underline-services .dus-label svg{position:absolute;left:-4px;right:-6px;bottom:-7px;width:calc(100% + 10px);height:12px;overflow:visible;pointer-events:none}
+.t-draw-on-underline-services .dus-label path{fill:none;stroke:var(--coral);stroke-width:2;stroke-linecap:round}
+</style>
+<div class="t-draw-on-underline-services" id="draw-on-underline-services-root">
+  <div class="dus-kicker">RESTORATION SERVICES</div>
+</div>
+<script>(function(){
+  var root=document.getElementById('draw-on-underline-services-root');
+  var items=['Repointing','Terra Cotta Replacement','Lintel Repair','Restoration Cleaning'];
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var rows=[];
+  function wobblePath(w,yBase,seed){
+    var d='M0 '+yBase.toFixed(1),x=0,step=Math.max(10,w/8),k=seed;
+    function rnd(){k=(k*9301+49297)%233280;return k/233280-0.5;}
+    while(x<w){x=Math.min(w,x+step);d+=' L'+x.toFixed(1)+' '+(yBase+rnd()*3).toFixed(1);}
+    return d;
+  }
+  items.forEach(function(name,idx){
+    var it=document.createElement('div');it.className='dus-item';
+    it.id='draw-on-underline-services-item-'+idx;
+    var num=document.createElement('span');num.className='dus-num';num.textContent='0'+(idx+1);
+    var lab=document.createElement('span');lab.className='dus-label';lab.textContent=name;
+    it.appendChild(num);it.appendChild(lab);root.appendChild(it);
+    var w=Math.max(10,lab.getBoundingClientRect().width+8);
+    var svg=document.createElementNS('http://www.w3.org/2000/svg','svg');
+    svg.setAttribute('viewBox','0 0 '+w+' 12');svg.setAttribute('preserveAspectRatio','none');
+    var paths=[];
+    // two slightly overlapping strokes — a pen doubling back
+    [ [5,17+idx*7],[7,53+idx*11] ].forEach(function(cfg,i2){
+      var p=document.createElementNS('http://www.w3.org/2000/svg','path');
+      p.setAttribute('d',wobblePath(w-(i2?14:0),cfg[0],cfg[1]));
+      if(i2)p.setAttribute('transform','translate(8 0.6)');
+      p.setAttribute('stroke-width',i2?1.4:2);
+      svg.appendChild(p);paths.push(p);
+    });
+    lab.appendChild(svg);
+    paths.forEach(function(p){
+      var L=p.getTotalLength()||w;
+      p.dataset.len=L;
+      p.style.strokeDasharray=L;
+      p.style.strokeDashoffset=L;
+      p.style.transition='stroke-dashoffset 450ms ease';
+    });
+    rows.push({el:it,paths:paths});
+  });
+  var active=-1;
+  function setActive(i){
+    if(i===active)return;
+    rows.forEach(function(r,j){
+      var on=(j===i);
+      r.el.classList.toggle('on',on);
+      r.paths.forEach(function(p){p.style.strokeDashoffset=on?'0':p.dataset.len;});
+    });
+    active=i;
+  }
+  if(reduce){setActive(0);rows[0].paths.forEach(function(p){p.style.transition='none';p.style.strokeDashoffset='0';});return;}
+  var hover=-1,cur=0,timer=null,visible=true;
+  rows.forEach(function(r,i){
+    r.el.addEventListener('mouseenter',function(){hover=i;setActive(i);});
+    r.el.addEventListener('mouseleave',function(){if(hover===i)hover=-1;});
+  });
+  function loop(){
+    if(visible&&hover<0){cur=(cur+1)%rows.length;setActive(cur);}
+    else if(hover>=0)cur=hover;
+  }
+  timer=setInterval(loop,2000);
+  var io=new IntersectionObserver(function(en){visible=en[0].isIntersecting;});
+  io.observe(root);
+  setActive(0);
+})()</script>
+</div>
+<figcaption><span class="num">27</span><b>Hand-Inked Underlines</b><i>type sketch svg</i></figcaption>
+</figure>
+<figure class="card" data-tags="photo interactive">
+<div class="tile" data-title="Before/After Facade Slider" data-tags="photo interactive">
+<style>
+.t-before-after-facade-slider{aspect-ratio:4/3;width:100%;overflow:hidden;position:relative;background:var(--navy2);touch-action:none;outline:none;cursor:ew-resize}
+.t-before-after-facade-slider .bas-layer{position:absolute;inset:0;background-image:url('https://raw.githubusercontent.com/victoriahendzel/kns-motion-concepts/main/dome-photo.jpg');background-size:cover;background-position:center 20%}
+.t-before-after-facade-slider .bas-before{filter:grayscale(.85) contrast(.82) brightness(.72) sepia(.25)}
+.t-before-after-facade-slider .bas-after{filter:saturate(1.05) contrast(1.06) brightness(1.04)}
+.t-before-after-facade-slider .bas-div{position:absolute;top:0;bottom:0;width:0;border-left:2px solid var(--coral);left:50%}
+.t-before-after-facade-slider .bas-bob{position:absolute;left:-8px;bottom:26px;width:14px;height:14px;background:var(--coral);border-radius:50% 50% 50% 0;transform:rotate(-45deg);box-shadow:0 0 0 2px rgba(18,33,56,.35)}
+.t-before-after-facade-slider .bas-knot{position:absolute;left:-5px;top:14px;width:8px;height:8px;border-radius:50%;background:var(--coral);box-shadow:0 0 0 2px rgba(18,33,56,.35)}
+.t-before-after-facade-slider .bas-ticks{position:absolute;left:0;right:0;top:0;height:8px;pointer-events:none}
+.t-before-after-facade-slider .bas-ticks i{position:absolute;top:0;width:1px;height:6px;background:var(--cream);opacity:.55}
+.t-before-after-facade-slider .bas-lab{position:absolute;font-weight:800;font-size:10px;letter-spacing:3px;color:var(--cream);text-shadow:0 1px 4px rgba(13,26,46,.8);transition:opacity .15s linear}
+.t-before-after-facade-slider .bas-lab.ex{left:14px;bottom:12px}
+.t-before-after-facade-slider .bas-lab.re{right:14px;bottom:12px;color:var(--coral2)}
+</style>
+<div class="t-before-after-facade-slider" id="before-after-facade-slider-root" tabindex="0" role="slider" aria-label="Compare weathered and restored facade" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+  <div class="bas-layer bas-before"></div>
+  <div class="bas-layer bas-after" id="before-after-facade-slider-after"></div>
+  <div class="bas-ticks" id="before-after-facade-slider-ticks"></div>
+  <div class="bas-div" id="before-after-facade-slider-div"><span class="bas-knot"></span><span class="bas-bob"></span></div>
+  <div class="bas-lab ex" id="before-after-facade-slider-ex">EXISTING</div>
+  <div class="bas-lab re" id="before-after-facade-slider-re">RESTORED</div>
+</div>
+<script>(function(){
+  var root=document.getElementById('before-after-facade-slider-root');
+  var after=document.getElementById('before-after-facade-slider-after');
+  var divl=document.getElementById('before-after-facade-slider-div');
+  var exL=document.getElementById('before-after-facade-slider-ex');
+  var reL=document.getElementById('before-after-facade-slider-re');
+  var ticks=document.getElementById('before-after-facade-slider-ticks');
+  for(var i=1;i<10;i++){var t=document.createElement('i');t.style.left=(i*10)+'%';ticks.appendChild(t);}
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var pos=50,sway=0,dragging=false,swept=reduce,sweepT=0,visible=true,raf=0,running=false;
+  function clamp(v){return Math.max(2,Math.min(98,v));}
+  function render(){
+    var p=clamp(pos+(dragging?0:sway));
+    after.style.clipPath='inset(0 0 0 '+p+'%)';
+    divl.style.left=p+'%';
+    exL.style.opacity=(.2+.75*Math.max(0,Math.min(1,(p-8)/14))).toFixed(2);
+    reL.style.opacity=(.2+.75*Math.max(0,Math.min(1,(94-p)/14))).toFixed(2);
+    root.setAttribute('aria-valuenow',Math.round(p));
+  }
+  function loop(ts){
+    if(!running)return;
+    if(!swept){ // teach-the-interaction sweep: out to 20, up to 60, back to center over 1.5s
+      if(!sweepT)sweepT=ts;
+      var u=Math.min(1,(ts-sweepT)/1500);
+      var K=[0,.18,.62,1],V=[50,20,60,50],j=0;
+      while(j<K.length-2&&u>K[j+1])j++;
+      var f=(u-K[j])/(K[j+1]-K[j]);f=f*f*(3-2*f);
+      pos=V[j]+(V[j+1]-V[j])*f;
+      if(u>=1){pos=50;swept=true;}
+    }else if(!dragging){
+      sway=Math.sin(ts/900)*0.28; // ~1px plumb-bob idle sway
+    }
+    render();
+    raf=requestAnimationFrame(loop);
+  }
+  function setFromX(clientX){
+    var r=root.getBoundingClientRect();
+    if(r.width<=0)return;
+    pos=clamp(((clientX-r.left)/r.width)*100);
+    swept=true;render();
+  }
+  root.addEventListener('pointerdown',function(e){dragging=true;root.setPointerCapture&&root.setPointerCapture(e.pointerId);setFromX(e.clientX);});
+  root.addEventListener('pointermove',function(e){if(dragging)setFromX(e.clientX);});
+  root.addEventListener('pointerup',function(){dragging=false;});
+  root.addEventListener('pointercancel',function(){dragging=false;});
+  root.addEventListener('keydown',function(e){
+    if(e.key==='ArrowLeft'){pos=clamp(pos-5);swept=true;render();e.preventDefault();}
+    else if(e.key==='ArrowRight'){pos=clamp(pos+5);swept=true;render();e.preventDefault();}
+  });
+  render();
+  if(reduce)return; // static meaningful state at 50%
+  var io=new IntersectionObserver(function(en){
+    visible=en[0].isIntersecting;
+    if(visible&&!running){running=true;raf=requestAnimationFrame(loop);}
+    else if(!visible){running=false;cancelAnimationFrame(raf);}
+  });
+  io.observe(root);
+})()</script>
+</div>
+<figcaption><span class="num">28</span><b>Before/After Facade Slider</b><i>photo interactive</i></figcaption>
+</figure>
+</main>
+<footer>KNS Building Restoration · internal exploration · prepared by Victoria Hendzel</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/ScrollTrigger.min.js"></script>
+<script>
+document.querySelectorAll('.chip').forEach(c=>c.addEventListener('click',()=>{
+  document.querySelectorAll('.chip').forEach(x=>x.classList.remove('on'));
+  c.classList.add('on');
+  const f=c.dataset.f;
+  document.querySelectorAll('.card').forEach(card=>{
+    card.classList.toggle('hide', f!=='all' && !(card.dataset.tags||'').split(/\s+/).includes(f));
+  });
+}));
+</script>
+</body>
+</html>
